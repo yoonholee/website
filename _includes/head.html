@@ -6,8 +6,19 @@
   <title>{{ site.name }}{% if page.title and page.url != "/" %} | {{ page.title }}{% endif %}</title>
   <meta name="description" content="{{ site.description }}">
 
-  <link rel="shortcut icon" href="{{ '/assets/img/favicon.ico' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="shortcut icon" href="{{ '/assets/img/favicon.ico' | prepend: "/" | relative_url | prepend: site.url }}">
 
-  <link rel="stylesheet" href="{{ '/assets/css/main.css' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | prepend: "/" | relative_url | prepend: site.url }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: "/" | relative_url | prepend: site.url }}"> 
+
+<script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script> 
+<script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+      extensions: ["tex2jax.js"], 
+      jax: ["input/TeX", "output/HTML-CSS"],
+      tex2jax: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']], processEscapes: true }
+      }); </script>
+ <script type="text/javascript" async 
+src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
 </head>
+
