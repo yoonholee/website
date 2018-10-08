@@ -28,8 +28,8 @@ google_analytics: UA-XXXXXXXXX # out your google-analytics code
 # -----------------------------------------------------------------------------
 # Blog
 # -----------------------------------------------------------------------------
-blog_name: lyh
-blog_description: personal/academic website of Yoonho Lee
+blog_name: blog
+blog_description: random things I'm thinking about
 
 # Pagination
 paginate: 4
