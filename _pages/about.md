@@ -1,16 +1,16 @@
 ---
 layout: about
 permalink: /
-title: <strong>Your</strong> Name
-description: <a href="">Affiliations</a>. Address. Contacts. Moto. Etc.
+title: <strong>Yoonho</strong> Lee
+description: Currently at Kakao corp (alternative military service)
 
 profile:
   align: right
   image: prof_pic.jpg
   address: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>something</p>
+    <p>something</p>
+    <p>something</p>
 
 news: true
 social: true
