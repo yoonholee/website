@@ -16,12 +16,16 @@ news: true
 social: true
 ---
 
-$33$
 
-$$ x^2+y^2 $$
+I am currently doing my alternative military service as a research scientist at
+[Kakao](https://www.kakaocorp.com/).
+I got my M.S. degree from the [computer science department at
+POSTECH](https://cse.postech.ac.kr/),
+as part of the [Machine Learning Group](http://mlg.postech.ac.kr/) (supervised
+by [Seungjin Choi](http://mlg.postech.ac.kr/~seungjin/)).
+I got my undergraduate degree from [POSTECH’s mathematics
+department](http://math.postech.ac.kr/).
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com){:target="\_blank"}. You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+My research interests include meta-learning and hierarchical reinforcement
+learning.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/){:target="\_blank"} and [Academicons](https://jpswalsh.github.io/academicons/){:target="\_blank"}, like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.

@@ -41,11 +41,8 @@ text:
     newer: 'Newer'
     older: 'Older'
 
-# Comments
-disqus_shortname: al-folio # put your disqus shortname
-
 # Optional features
-show_social_icons:  false
+show_social_icons:  true
 enable_anchorjs:    false
 enable_katex:       true
 
@@ -82,30 +79,6 @@ plugins:
     - jekyll-paginate
     - jekyll/scholar
     - jemoji
-
-# Jekyll-Scholar
-scholar:
-
-  last_name: Einstein
-
-  style: apa
-  locale: en
-
-  sort_by: year
-  order: descending
-
-  source: /_bibliography/
-  bibliography: papers.bib
-  bibliography_template: bib
-
-  replace_strings: true
-  join_strings: true
-
-  details_dir: bibliography
-  details_layout: bibtex.html
-  details_link: Details
-
-  query: "@*"
 
 # -----------------------------------------------------------------------------
 # Other settings
