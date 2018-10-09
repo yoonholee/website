@@ -14,7 +14,7 @@ last_updated: 2018/10/08 # leave blank if you don't want to display last updated
 # Social integration
 # -----------------------------------------------------------------------------
 orcid_id: # your ORCID ID
-contact_note: 
+contact_note:  
 #You can even add a little note about which of these is the best way to reach you.
 
 disqus_shortname: yoonholee
@@ -24,7 +24,7 @@ google_analytics: UA-56028200-1
 # Blog
 # -----------------------------------------------------------------------------
 blog_name: blog
-blog_description: random things I'm thinking about
+blog_description: things I'm thinking about
 
 # Pagination
 paginate: 4

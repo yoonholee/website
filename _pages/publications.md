@@ -4,7 +4,6 @@ permalink: /publications/
 title: Publications
 ---
 
-
 <br><br>
 #### [Set Transformer](https://arxiv.org/abs/1810.00825)
 
