@@ -6,24 +6,19 @@ email: einet89@gmail.com
 description: > # this means to ignore newlines until "url:"
     description
     #A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
-footer_text: >
-    footer text
-
+footer_text: # This goes on the footer btw name and last updated
 url:  # the base hostname & protocol for your site
 last_updated: 2018/10/08 # leave blank if you don't want to display last updated
 
 # -----------------------------------------------------------------------------
 # Social integration
 # -----------------------------------------------------------------------------
-github_username: yoonholee # your GitHub user name
-twitter_username: yoonholee # your Twitter handle
-linkedin_username: yoonholee # your LinkedIn user name
-scholar_userid: BAAZ_ysAAAAJ # your Google Scholar ID
 orcid_id: # your ORCID ID
 contact_note: 
 #You can even add a little note about which of these is the best way to reach you.
 
-google_analytics: UA-XXXXXXXXX # out your google-analytics code
+disqus_shortname: yoonholee
+google_analytics: UA-56028200-1
 
 # -----------------------------------------------------------------------------
 # Blog
