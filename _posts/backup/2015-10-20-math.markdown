@@ -3,6 +3,7 @@ layout: post
 title: a post with math
 date: 2015-10-20 11:12:00-0400
 description: an example of a blog post with some math
+published: false
 ---
 This theme supports rendering beautiful math in inline and display modes using [KaTeX](https://khan.github.io/KaTeX/) engine. 
 You just need to surround your math expression with `$$`, like `$$ E = mc^2 $$`. 
@@ -17,3 +18,5 @@ $$
 
 Note that [KaTeX](https://khan.github.io/KaTeX/) is work in progress, so it does not support the full range of math expressions as, say, [MathJax](https://www.mathjax.org/).
 Yet, it is [blazing fast](http://www.intmath.com/cg5/katex-mathjax-comparison.php).
+
+change something
