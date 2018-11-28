@@ -2,7 +2,7 @@
 layout: post
 title: Five Ways to Dissect an ELBO
 date: 2018-11-27 11:12:00-0400
-description: an example of a blog post with some math
+description: five different ways to interpret the Evidence Lower BOund.
 published: true
 comments: true
 ---
