@@ -5,7 +5,7 @@ title: Publications
 ---
 
 <br><br>
-#### [Set Transformer](https://arxiv.org/abs/1810.00825)
+#### [Set Transformer: A Framework for Attention-based Permutation-Invariant Neural Networks](https://arxiv.org/abs/1810.00825)
 
 Juho Lee, **Yoonho Lee**, Jungtaek Kim, Adam R. Kosiorek, Seungjin Choi, Yee
 Whye Teh
