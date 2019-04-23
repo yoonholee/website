@@ -2,7 +2,7 @@
 layout: about
 permalink: /
 title: <strong>Yoonho</strong> Lee
-description: Currently at Kakao corp (alternative military service)
+description: Currently at Kakao corp
 
 profile:
   align: right
@@ -20,5 +20,5 @@ My advisor was professor [Seungjin Choi](http://mlg.postech.ac.kr/~seungjin/).
 I got my undergraduate degree from [POSTECH’s mathematics
 department](http://math.postech.ac.kr/).
 
-My research interests include meta-learning and deep generative models.
+My research interests include meta-learning, permutation-invariant neural networks, and hierarchical reinforcement learning.
 
