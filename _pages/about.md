@@ -2,7 +2,7 @@
 layout: about
 permalink: /
 title: <strong>Yoonho</strong> Lee
-description: Currently at Kakao corp
+description: Research scientist at Kakao corp
 
 profile:
   align: right
@@ -13,12 +13,14 @@ news: true
 social: true
 ---
 
-I got my M.S. degree from the [computer science department at
-POSTECH](https://cse.postech.ac.kr/),
+I got my M.S. degree from [POSTECH's CS department](https://cse.postech.ac.kr/),
 as part of the [Machine Learning Group](http://mlg.postech.ac.kr/)
-My advisor was professor [Seungjin Choi](http://mlg.postech.ac.kr/~seungjin/).
-I got my undergraduate degree from [POSTECH’s mathematics
-department](http://math.postech.ac.kr/).
+under the supervision of professor [Seungjin Choi](http://mlg.postech.ac.kr/~seungjin/).
+I got my undergraduate degree from [POSTECH’s math department](http://math.postech.ac.kr/).
 
-My research interests include meta-learning, permutation-invariant neural networks, and hierarchical reinforcement learning.
+My research interests include:
+* meta-learning
+* generalization in deep learning
+* information theory
+* variational inference
 
