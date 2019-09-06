@@ -13,10 +13,9 @@ news: true
 social: true
 ---
 
-I got my M.S. degree from [POSTECH's CS department](https://cse.postech.ac.kr/),
-as part of the [Machine Learning Group](http://mlg.postech.ac.kr/)
+I have completed my M.S. in [computer science](https://cse.postech.ac.kr/) at the Pohang University of Science and Technology (POSTECH)
 under the supervision of professor [Seungjin Choi](http://mlg.postech.ac.kr/~seungjin/).
-I got my undergraduate degree from [POSTECH’s math department](http://math.postech.ac.kr/).
+I also hold a bachelor's degree in [mathematics](http://math.postech.ac.kr/) from POSTECH.
 
 My research interests include:
 * meta-learning
