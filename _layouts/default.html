@@ -1,23 +1,47 @@
 <!DOCTYPE html>
 <html>
 
-  {% include head.html %}
 
-  <body>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        TeX: {
+          equationNumbers: {
+            autoNumber: "AMS"
+          }
+        },
+        tex2jax: {
+        inlineMath: [ ['$', '$'] ],
+        displayMath: [ ['$$', '$$'] ],
+        processEscapes: true,
+      }
+    });
+    MathJax.Hub.Register.MessageHook("Math Processing Error",function (message) {
+          alert("Math Processing Error: "+message[1]);
+        });
+    MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
+          alert("Math Processing Error: "+message[1]);
+        });
+    </script>
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
 
-    {% include header.html %}
+{% include head.html %}
+
+<body>
+
+  {% include header.html %}
 
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
+  <div class="page-content">
+    <div class="wrapper">
+      {{ content }}
     </div>
+  </div>
 
-    {% include footer.html %}
+  {% include footer.html %}
 
-    {% include hemline.html %}
+  {% include hemline.html %}
 
-  </body>
+</body>
 
 </html>
