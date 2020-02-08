@@ -30,9 +30,8 @@
         .title { font-weight: bolder; }
         .author {
             a {
-                border-bottom: 1px dashed $theme-color;
                 &:hover {
-                    border-bottom-style: solid;
+                    border-bottom: 1px solid;
                     text-decoration: none;
                 }
             }
