@@ -17,28 +17,28 @@
   <span class="author">
     {% for author in entry.author_array %}
     {% if forloop.length == 1 %}
-    {% if author.last == site.scholar.last_name and author.first == site.scholar.first_name %}
+    {% if author.first contains site.scholar.first_name %}
     <b> {{author.first}} {{author.last}} </b>
     {% else %}
     {{author.first}} {{author.last}}
     {% endif %}
     {% else %}
     {% unless forloop.last %}
-    {% if author.last == site.scholar.last_name and author.first == site.scholar.first_name %}
-    <b> {{author.first}} {{author.last}} </b>,
+    {% if author.first contains site.scholar.first_name %}
+    <b> {{author.first}} {{author.last}}</b>,
     {% else %}
-    {% if site.data.coauthors[author.last] %}
-    <a href="{{site.data.coauthors[author.last].url}}" target="_blank">{{author.last}}, {{author.first}}</a>,
+    {% if site.data.coauthors[author.first] %}
+    <a class="coauthorlink" href="{{site.data.coauthors[author.first].url}}" target="_blank">{{author.first}} {{author.last}}</a>,
     {% else %}
     {{author.first}} {{author.last}},
     {% endif %}
     {% endif %}
     {% else %}
-    {% if author.last == site.scholar.last_name and author.first == site.scholar.first_name %}
-    <b> {{author.first}} {{author.last}} </b>
+    {% if author.first contains site.scholar.first_name %}
+    <b> {{author.first}} {{author.last}}</b>
     {% else %}
-    {% if site.data.coauthors[author.last] %}
-    and <a href="{{site.data.coauthors[author.last].url}}" target="_blank">{{author.last}}, {{author.first}}</a>
+    {% if site.data.coauthors[author.first] %}
+    and <a class="coauthorlink" href="{{site.data.coauthors[author.first].url}}" target="_blank">{{author.first}} {{author.last}}</a>
     {% else %}
     and {{author.first}} {{author.last}}
     {% endif %}
@@ -63,33 +63,33 @@
     {% endif %} -->
 
     {% if entry.abstract %}
-    [<a class="abstract">abstract</a>]
+    [<a class="abstract publink">abstract</a>]
     {% endif %}
     {% if entry.arxiv %}
-    [<a href="http://arxiv.org/abs/{{ entry.arxiv }}" target="_blank">arXiv</a>]
+    [<a class="publink" href="http://arxiv.org/abs/{{ entry.arxiv }}" target="_blank">arXiv</a>]
     {% endif %}
     {% if entry.paper %}
-    [<a href="{{ entry.paper }}" target="_blank">paper</a>]
+    [<a class="publink" href="{{ entry.paper }}" target="_blank">paper</a>]
     {% endif %}
     {% if entry.html %}
-    [<a href="{{ entry.html }}" target="_blank">HTML</a>]
+    [<a class="publink" href="{{ entry.html }}" target="_blank">HTML</a>]
     {% endif %}
     {% if entry.supp %}
-    [<a href="{{ entry.supp | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}"
+    [<a class="publink" href="{{ entry.supp | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}"
       target="_blank">Supp</a>]
     {% endif %}
     {% if entry.poster %}
-    [<a href="{{ entry.poster | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}"
+    [<a class="publink" href="{{ entry.poster | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}"
       target="_blank">Poster</a>]
     {% endif %}
     {% if entry.slides %}
-    [<a href="{{ entry.slides | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}"
+    [<a class="publink" href="{{ entry.slides | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}"
       target="_blank">Slides</a>]
     {% endif %}
     {% if entry.code %}
-    [<a href="{{ entry.code }}" target="_blank">code</a>]
+    [<a class="publink" href="{{ entry.code }}" target="_blank">code</a>]
     {% endif %}
-    [<a class="bibtex">bibtex</a>]
+    [<a class="bibtex publink">bibtex</a>]
   </span>
 
   <!-- Hidden abstract block -->

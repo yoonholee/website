@@ -1,15 +1,18 @@
+$my-lightblue: rgb(17, 134, 202); 
+$my-darkblue: rgb(22, 72, 119);
+
 a {
     color: $text-color;
     text-decoration: none;
 
     &:hover {
-        color: $theme-color;
+        color: $my-darkblue;
         text-decoration: none;
     }
 }
 
 article a, .news a {
-    color: $theme-color;
+    color: $my-lightblue;
     font-weight: 100;
 
     &:hover {
@@ -20,7 +23,12 @@ article a, .news a {
 .social a {
     color: $text-color;
 
-    &:hover { color: $theme-color; }
+    &:hover { color: $my-lightblue; }
+}
+
+.coauthorlink {
+    // color: rgb(18, 35, 53);
+    color: $my-darkblue;
 }
 
 

@@ -25,6 +25,7 @@
         margin: 10px 0;
         position: relative;
 
+
         span { display: block; }
         .title { font-weight: bolder; }
         .author {
@@ -42,20 +43,25 @@
         }
         a.abstract, a.bibtex { cursor: pointer; }
         .hidden {
+            $font-stack:    Helvetica, sans-serif;
+            font: 100% $font-stack;
+            color: black;
+
             font-size: $small-font-size;
             max-height: 0px;
             overflow: hidden;
             text-align: justify;
-            -webkit-transition: 0.15s ease;
-            -moz-transition: 0.15s ease;
-            -ms-transition: 0.15s ease;
-            -o-transition: 0.15s ease;
-            transition: all 0.15s ease;
+            // -webkit-transition: 0.5s ease;
+            // -moz-transition: 0.5s ease;
+            // -ms-transition: 0.5s ease;
+            // -o-transition: 0.5s ease;
+            transition: all 0.5s ease;
 
             p {
                 font-size: 0.9em;
                 line-height: 1.4em;
                 margin: 10px;
+                padding: 10px;
             }
             pre {
                 font-size: 1em;
@@ -65,18 +71,22 @@
         }
         .hidden.open {
             max-height: 100em;
-            -webkit-transition: 0.15s ease;
-            -moz-transition: 0.15s ease;
-            -ms-transition: 0.15s ease;
-            -o-transition: 0.15s ease;
-            transition: all 0.15s ease;
+            // -webkit-transition: 0.5s ease;
+            // -moz-transition: 0.5s ease;
+            // -ms-transition: 0.5s ease;
+            // -o-transition: 0.5s ease;
+            transition: all 0.5s ease;
         }
         // span.abstract.hidden {
-        //     border: dashed 1px $background-color;
+            // border: dashed 1px $background-color;
+            // border: groove 1px $background-color;
         // }
-        // span.abstract.hidden.open {
-        //     border-color: $grey-color;
-        // }
+        span.abstract.hidden.open {
+            border: none 0px $background-color;
+            border-radius: 10px;
+            border-color: white;
+            background-color: rgb(240, 240, 240);
+        }
     }
     abbr {
         position: absolute;
