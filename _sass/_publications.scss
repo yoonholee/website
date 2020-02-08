@@ -53,6 +53,7 @@
             transition: all 0.15s ease;
 
             p {
+                font-size: 0.9em;
                 line-height: 1.4em;
                 margin: 10px;
             }
@@ -70,12 +71,12 @@
             -o-transition: 0.15s ease;
             transition: all 0.15s ease;
         }
-        span.abstract.hidden {
-            border: dashed 1px $background-color;
-        }
-        span.abstract.hidden.open {
-            border-color: $grey-color;
-        }
+        // span.abstract.hidden {
+        //     border: dashed 1px $background-color;
+        // }
+        // span.abstract.hidden.open {
+        //     border-color: $grey-color;
+        // }
     }
     abbr {
         position: absolute;

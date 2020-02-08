@@ -61,6 +61,10 @@
     <!-- {% if entry.abstract %}
     [<a class="abstract">Abs</a>]
     {% endif %} -->
+
+    {% if entry.abstract %}
+    [<a class="abstract">abstract</a>]
+    {% endif %}
     {% if entry.arxiv %}
     [<a href="http://arxiv.org/abs/{{ entry.arxiv }}" target="_blank">arXiv</a>]
     {% endif %}
@@ -85,12 +89,17 @@
     {% if entry.code %}
     [<a href="{{ entry.code }}" target="_blank">code</a>]
     {% endif %}
+    [<a class="bibtex">bibtex</a>]
   </span>
 
   <!-- Hidden abstract block -->
-  <!-- {% if entry.abstract %}
+  {% if entry.abstract %}
   <span class="abstract hidden">
     <p>{{ entry.abstract }}</p>
   </span>
-  {% endif %} -->
+  {% endif %}
+  <!-- Hidden abstract block -->
+  <span class="bibtex hidden">
+    <pre>{{ entry.bibtex }}</pre>
+  </span>
 </div>

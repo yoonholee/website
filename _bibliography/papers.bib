@@ -1,15 +1,5 @@
 % Encoding: UTF-8
 
-@article{kim2019learning,
-  title={Learning Dynamics of Attention: Human Prior for Interpretable Machine Reasoning},
-  author={Kim, Wonjae and Lee, Yoonho},
-  journal={NeurIPS 2019},
-  year={2019},
-  month = {6},
-  paper={https://arxiv.org/abs/1905.11666},
-  code={https://github.com/kakao/DAFT}
-}
-
 @article{lee2019discrete,
   title={Discrete Infomax Codes for Meta-Learning},
   author={Lee, Yoonho and Kim, Wonjae and Choi, Seungjin},
@@ -19,13 +9,24 @@
   paper={https://arxiv.org/abs/1905.11656},
 }
 
-@Article{lee2018gradient,
-  author  = {Lee, Yoonho and Choi, Seungjin},
-  title   = {Gradient-based meta-learning with learned layerwise metric and subspace},
-  journal = {ICML 2018},
-  year    = {2018},
-  paper={http://proceedings.mlr.press/v80/lee18a/lee18a.pdf},
-  code={https://github.com/yoonholee/MT-net}
+@Article{lee2019deep,
+  author        = {Juho Lee and Yoonho Lee and Yee Whye Teh},
+  title         = {Deep Amortized Clustering},
+  year          = {2019},
+  month = {9},
+  journal = {Sets and Parts Workshop @ NeurIPS 2019 (oral)},
+  paper={https://arxiv.org/abs/1909.13433}
+}
+
+@article{kim2019learning,
+  title={Learning Dynamics of Attention: Human Prior for Interpretable Machine Reasoning},
+  author={Kim, Wonjae and Lee, Yoonho},
+  journal={NeurIPS 2019},
+  year={2019},
+  month = {6},
+  paper={https://arxiv.org/abs/1905.11666},
+  code={https://github.com/kakao/DAFT},
+  abstract={Without relevant human priors, neural networks may learn uninterpretable features. We propose Dynamics of Attention for Focus Transition (DAFT) as a human prior for machine reasoning. DAFT is a novel method that regularizes attention-based reasoning by modelling it as a continuous dynamical system using neural ordinary differential equations. As a proof of concept, we augment a state-of-the-art visual reasoning model with DAFT. Our experiments reveal that applying DAFT yields similar performance to the original model while using fewer reasoning steps, showing that it implicitly learns to skip unnecessary steps. We also propose a new metric, Total Length of Transition (TLT), which represents the effective reasoning step size by quantifying how much a given model's focus drifts while reasoning about a question. We show that adding DAFT results in lower TLT, demonstrating that our method indeed obeys the human prior towards shorter reasoning paths in addition to producing more interpretable attention maps.}
 }
 
 @Article{pmlr-v97-lee19d,
@@ -35,16 +36,24 @@
   year      = {2019},
   month = {2},
   paper = {http://proceedings.mlr.press/v97/lee19d/lee19d.pdf},
-  code={https://github.com/juho-lee/set_transformer}
+  code={https://github.com/juho-lee/set_transformer},
+  abstract={Many machine learning tasks such as multiple instance learning, 3D shape recognition, and few-shot image classification are defined on sets of instances. Since solutions to such problems do not depend on the order of elements of the set, models used to address them should be permutation invariant. We present an attention-based neural network module, the Set Transformer, specifically designed to model interactions among elements in the input set. The model consists of an encoder and a decoder, both of which rely on attention mechanisms. In an effort to reduce computational complexity, we introduce an attention scheme inspired by inducing point methods from sparse Gaussian process literature. It reduces the computation time of self-attention from quadratic to linear in the number of elements in the set. We show that our model is theoretically attractive and we evaluate it on a range of tasks, demonstrating the state-of-the-art performance compared to recent methods for set-structured data.}
 }
 
-@Article{lee2019deep,
-  author        = {Juho Lee and Yoonho Lee and Yee Whye Teh},
-  title         = {Deep Amortized Clustering},
-  year          = {2019},
-  month = {9},
-  journal = {Sets and Parts Workshop @ NeurIPS 2019 (oral)},
-  paper={https://arxiv.org/abs/1909.13433}
+@Article{lee2018gradient,
+  author  = {Lee, Yoonho and Choi, Seungjin},
+  title   = {Gradient-based meta-learning with learned layerwise metric and subspace},
+  journal = {ICML 2018},
+  year    = {2018},
+  paper={http://proceedings.mlr.press/v80/lee18a/lee18a.pdf},
+  code={https://github.com/yoonholee/MT-net},
+  abstract={
+    Gradient-based meta-learning methods leverage gradient descent to learn the commonalities among various tasks. 
+    While previous such methods have been successful in meta-learning tasks, they resort to simple gradient descent during meta-testing. 
+    Our primary contribution is the MT-net, which enables the meta-learner to learn on each layer's activation space a subspace that the task-specific learner performs gradient descent on. 
+    Additionally, a task-specific learner of an MT-net performs gradient descent with respect to a meta-learned distance metric, which warps the activation space to be more sensitive to task identity. 
+    We demonstrate that the dimension of this learned subspace reflects the complexity of the task-specific learner's adaptation task, and also that our model is less sensitive to the choice of initial learning rates than previous gradient-based meta-learning methods. 
+    Our method achieves state-of-the-art or comparable performance on few-shot classification and regression tasks.}
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}
