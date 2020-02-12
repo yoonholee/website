@@ -9,6 +9,7 @@ footer_text: >
   Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme,
   hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 url:  # the base hostname & protocol for your site
+baseurl:  # the base hostname & protocol for your site
 last_updated: 2018/10/08 # leave blank if you don't want to display last updated
 
 # -----------------------------------------------------------------------------

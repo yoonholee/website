@@ -89,7 +89,7 @@
     {% if entry.code %}
     [<a class="publink" href="{{ entry.code }}" target="_blank">code</a>]
     {% endif %}
-    [<a class="bibtex publink">bibtex</a>]
+    {% comment %} [<a class="bibtex publink">bibtex</a>] {% endcomment %}
   </span>
 
   <!-- Hidden abstract block -->
@@ -99,7 +99,7 @@
   </span>
   {% endif %}
   <!-- Hidden abstract block -->
-  <span class="bibtex hidden">
+  {% comment %} <span class="bibtex hidden">
     <pre>{{ entry.bibtex }}</pre>
-  </span>
+  </span> {% endcomment %}
 </div>
