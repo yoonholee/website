@@ -1,0 +1,64 @@
+- title: General Information
+  type: map
+  contents:
+    - name: Full Name
+      value: Yoonho Lee
+    - name: Contact
+      value: yoonholee95 [at] gmail [dot] com
+    - name: Languages
+      value: Korean (native), English (fluent)
+
+- title: Education
+  type: table
+  contents:
+    - title: Pohang University of Science and Technology - M.S. in Machine Learning
+      year: 2016 - 2018
+      description:
+        - 'Advised by professor 
+        <a href="http://mlg.postech.ac.kr/~seungjin/" target="_blank"><b>Seungjin Choi</b></a>.'
+        - 'Thesis: 
+        <a href="http://proceedings.mlr.press/v80/lee18a/lee18a.pdf" target="_blank"><b>Gradient-Based Meta-Learning with Learned Layerwise Metric and Subspace</b></a> (published in ICML-2018)'
+    - title: UC Berkeley - Exchange Student (Mathematics)
+      year: 2014 - 2015
+    - title: Pohang University of Science and Technology - B.S. in Mathematics
+      year: 2012 - 2016
+    - title: Sejong Science High School (Early Graduation)
+      year: 2010 - 2012
+
+- title: Industry Experience
+  type: table
+  contents:
+    - title: "Research Scientist at AITRICS"
+      year: "2020 - "
+    - title: "Research Scientist at Kakao Corporation"
+      year: "2018 - 2020"
+    - title: "Research Intern at Naver Corporation"
+      year: "2018"
+
+- title: Honors and Awards
+  type: table
+  contents:
+    - year: Scholarship
+      items:
+        - "Korean Presidential Science Scholarship (2012~2016)"
+    - year: Awards
+      items:
+        - "NeurIPS Outstanding Reviewer (2019)"
+        - "ICML Travel Award (2018)"
+        - "Korean Mathematical Olympiad (KMO): Silver medal (2010)"
+        - "Junior Korean Mathematical Olympiad (JKMO): Gold medal (2008)"
+
+- title: Misc
+  type: table
+  contents:
+    - year: Reviewing
+      items:
+      - "NeurIPS (2018-2020)"
+      - "ICML (2019-2020)"
+      - "AISTATS (2019-2020)"
+      - "IJCAI (2019)"
+      - "ACML (2019-2020)"
+    - year: Skills
+      items:
+      - "Programming Languages: C, C++, Python, Matlab"
+      - "Frameworks: PyTorch, TensorFlow, NumPy, SciPy, Pandas, Seaborn"

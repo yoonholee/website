@@ -1,32 +1,343 @@
-@charset "UTF-8";
+/*******************************************************************************
+ * Styles for the base elements of the theme.
+ ******************************************************************************/
+// Typography
 
-html, body {
-  height: auto;
-  min-height: 100%;
-  -webkit-text-size-adjust: 100%;
+a:hover {
+  transition: none;
 }
 
-img {
-  max-width: none;
+a,
+table.table a {
+  color: $theme-color;
+  &:hover {
+    color: $theme-color-dark;
+    font-weight: 400;
+    text-decoration: underline;
+  }
 }
 
-em img {
-  max-width: 100%;
-  margin-left: 0;
+// Math
+
+.equation {
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
-body {
-          box-sizing: border-box;
-     -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
+// Caption
+
+.caption {
+  font-size: 0.875rem;
+  margin-top: 0.75rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
-.wrapper {
-    max-width: -webkit-calc(800px - (#{$horizontal-spacing-unit} * 2));
-    max-width:         calc(800px - (#{$horizontal-spacing-unit} * 2));
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: $horizontal-spacing-unit;
-    padding-left: $horizontal-spacing-unit;
-    @extend .clearfix;
+// Profile
+
+.profile {
+  .address {
+    font-family: monospace;
+    font-size: 1.2rem;
+    p {
+      margin: 0;
+    }
+  }
+}
+
+// Navbar customization
+
+.navbar {
+  box-shadow: none;
+  border-bottom: 1px solid $grey-color-light;
+  opacity: 0.95;
+}
+.navbar.navbar-light {
+  // Remove link decoration
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .navbar-nav .nav-item .nav-link {
+    &:hover {
+      color: $theme-color-dark;
+      transition: none;
+    }
+  }
+  .navbar-nav .nav-item.active > .nav-link {
+    background-color: inherit;
+    color: $theme-color;
+    font-weight: 500;
+    &:hover {
+      color: $theme-color;
+    }
+  }
+  .contact-icon {
+    font-size: 2rem;
+    a {
+      color: $grey-color-dark;
+      &:hover {
+        color: $theme-color;
+      }
+    }
+  }
+}
+
+.navbar-toggler {
+  .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: $grey-color-dark;
+    border-radius: 1px;
+    margin-bottom: 4px;
+    transition: all 0.2s;
+  }
+  .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+  }
+  .middle-bar {
+    opacity: 0;
+  }
+  .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+  }
+}
+
+.navbar-toggler.collapsed {
+  .top-bar {
+    transform: rotate(0);
+  }
+  .middle-bar {
+    opacity: 1;
+  }
+  .bottom-bar {
+    transform: rotate(0);
+  }
+}
+
+// News
+.news table td {
+  font-size: 1rem;
+}
+
+.news table.table-sm th,
+.news table.table-sm td {
+  padding: 0.2rem 0rem;
+}
+
+// Social (bottom)
+
+.social {
+  text-align: center;
+  .contact-icon {
+    font-size: 4rem;
+    a {
+      color: $grey-color-dark;
+      &:hover {
+        color: $theme-color;
+      }
+    }
+  }
+  .contact-note {
+    font-size: 0.8rem;
+  }
+}
+
+// Footer
+
+footer.fixed-bottom {
+  color: lighten($grey-color, 25%);
+  background-color: $grey-color-dark;
+  font-size: 0.75rem;
+  .container {
+    padding-top: 9px;
+    padding-bottom: 8px;
+  }
+  a {
+    color: white;
+    &:hover {
+      color: lighten($theme-color, 25%);
+      text-decoration: none;
+    }
+  }
+}
+
+footer.sticky-bottom {
+  border-top: 1px solid $grey-color-light;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-size: 0.9rem;
+}
+
+// Blog
+
+.header-bar {
+  border-bottom: 1px solid $grey-color-light;
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+  h1 {
+    color: $theme-color;
+    font-size: 5rem;
+  }
+}
+
+.post-list {
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0;
+  li {
+    border-bottom: 1px solid $grey-color-light;
+    list-style: none;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    .post-meta {
+      color: $grey-color;
+      font-size: 0.875rem;
+      margin-bottom: 0;
+    }
+    a {
+      color: black;
+      text-decoration: none;
+      &:hover {
+        color: $theme-color;
+      }
+    }
+  }
+}
+
+.pagination .page-item.active .page-link {
+  background-color: $theme-color;
+  &:hover {
+    background-color: $theme-color;
+  }
+}
+
+// Distill
+
+.distill {
+  a:hover {
+    border-bottom-color: $theme-color;
+    text-decoration: none;
+  }
+}
+
+// Projects
+
+.projects {
+  .grid-item {
+    width: 250px;
+    margin-bottom: 10px;
+    a {
+      color: black;
+      text-decoration: none;
+      &:hover {
+        color: $theme-color;
+      }
+    }
+  }
+  .card img {
+    width: 100%;
+  }
+}
+
+// Badge
+.my-badge {
+  color: $theme-color !important;
+  background-color: $theme-color-light;
+}
+
+// Publications
+.publications {
+  margin-top: 2rem;
+  h2.year {
+    color: $grey-color-light;
+    border-top: 1px solid $grey-color-light;
+    padding-top: 1rem;
+    margin-top: 2rem;
+    margin-bottom: -2rem;
+    text-align: right;
+  }
+  ol.bibliography {
+    list-style: none;
+    padding: 0;
+    margin-top: 0;
+
+    li {
+      margin-bottom: 1rem;
+      .abbr {
+        height: 2rem;
+        margin-bottom: 0.5rem;
+        abbr {
+          display: inline-block;
+          background-color: $theme-color-light;
+          color: $theme-color !important;
+          padding-left: 1rem;
+          padding-right: 1rem;
+        }
+      }
+      span {
+        display: block;
+      }
+      .title {
+        font-weight: bolder;
+      }
+      .author {
+        a {
+          border-bottom: 1px dashed $theme-color;
+          &:hover {
+            border-bottom-style: solid;
+            text-decoration: none;
+          }
+        }
+        > em {
+          border-bottom: 1px solid;
+          font-style: normal;
+        }
+      }
+      em.star {
+        border-bottom: none;
+        color: $theme-color;
+        font-style: normal;
+      }
+      a.abstract,
+      a.bibtex {
+        color: $theme-color;
+        cursor: pointer;
+      }
+      .hidden {
+        font-size: 0.875rem;
+        max-height: 0px;
+        overflow: hidden;
+        text-align: justify;
+        transition: all 0.6s ease-in-out;
+
+        p {
+          line-height: 1.4em;
+          margin: 10px;
+        }
+        pre {
+          font-size: 1em;
+          line-height: 1.4em;
+        }
+      }
+      .hidden.open {
+        max-height: 100em;
+        // -webkit-transition: 0.6s ease-in-out;
+        // -moz-transition: 0.6s ease-in-out;
+        // -ms-transition: 0.6s ease-in-out;
+        // -o-transition: 0.6s ease-in-out;
+        transition: all 0.6s ease-in-out;
+      }
+      span.abstract.hidden.open {
+        padding: 0.3rem 0.6rem;
+        background-color: $theme-color-light;
+        border-radius: 1rem;
+      }
+    }
+  }
 }
