@@ -3,52 +3,42 @@
 
 <div class="row">
   <div class="col-sm-2 abbr">
-  {% if entry.abbr %}
-    {% if site.data.venues[entry.abbr] %}
-    <abbr class="badge">{{entry.abbr}}</abbr>
+    {% if entry.abbr %} {% if site.data.venues[entry.abbr] %}
+    <abbr class="my-badge">{{entry.abbr}}</abbr>
     {% else %}
-    <abbr class="badge">{{entry.abbr}}</abbr>
-    {% endif %}
-  {% endif %}
+    <abbr class="my-badge">{{entry.abbr}}</abbr>
+    {% endif %} {% endif %}
   </div>
 
   <div id="{{entry.key}}" class="col-sm-8">
-    {% if entry.type == "thesis" %}
-    {{reference}}
-    {% else %}
+    {% if entry.type == "thesis" %} {{reference}} {% else %}
     <span class="title">{{entry.title}}</span>
     <span class="author">
-      {% for author in entry.author_array %}
-      {% if forloop.length == 1 %}
-      {% if author.first contains site.scholar.first_name %}
+      {% for author in entry.author_array %} {% if forloop.length == 1 %} {% if
+      author.first contains site.scholar.first_name %}
       <b> {{author.first}} {{author.last}} </b>
-      {% else %}
-      {{author.first}} {{author.last}}
-      {% endif %}
-      {% else %}
-      {% unless forloop.last %}
-      {% if author.first contains site.scholar.first_name %}
-      <b> {{author.first}} {{author.last}}</b>,
-      {% else %}
-      {% if site.data.coauthors[author.first] %}
-      <a class="coauthorlink" href="{{site.data.coauthors[author.first].url}}" target="_blank">{{author.first}} {{author.last}}</a>,
-      {% else %}
-      {{author.first}} {{author.last}},
-      {% endif %}
-      {% endif %}
-      {% else %}
-      {% if author.first contains site.scholar.first_name %}
+      {% else %} {{author.first}} {{author.last}} {% endif %} {% else %} {%
+      unless forloop.last %} {% if author.first contains site.scholar.first_name
+      %}
+      <b> {{author.first}} {{author.last}}</b>, {% else %} {% if
+      site.data.coauthors[author.first] %}
+      <a
+        class="coauthorlink"
+        href="{{site.data.coauthors[author.first].url}}"
+        target="_blank"
+        >{{author.first}} {{author.last}}</a
+      >, {% else %} {{author.first}} {{author.last}}, {% endif %} {% endif %} {%
+      else %} {% if author.first contains site.scholar.first_name %}
       <b> {{author.first}} {{author.last}}</b>
-      {% else %}
-      {% if site.data.coauthors[author.first] %}
-      and <a class="coauthorlink" href="{{site.data.coauthors[author.first].url}}" target="_blank">{{author.first}} {{author.last}}</a>
-      {% else %}
-      and {{author.first}} {{author.last}}
-      {% endif %}
-      {% endif %}
-      {% endunless %}
-      {% endif %}
-      {% endfor %}
+      {% else %} {% if site.data.coauthors[author.first] %} and
+      <a
+        class="coauthorlink"
+        href="{{site.data.coauthors[author.first].url}}"
+        target="_blank"
+        >{{author.first}} {{author.last}}</a
+      >
+      {% else %} and {{author.first}} {{author.last}} {% endif %} {% endif %} {%
+      endunless %} {% endif %} {% endfor %}
     </span>
 
     <span class="periodical">
@@ -65,34 +55,44 @@
       [<a class="abstract">Abs</a>]
       {% endif %} -->
 
-      {% if entry.abstract %}
-      [<a class="abstract publink">abstract</a>]
-      {% endif %}
-      {% if entry.arxiv %}
-      [<a class="publink" href="http://arxiv.org/abs/{{ entry.arxiv }}" target="_blank">arXiv</a>]
-      {% endif %}
-      {% if entry.paper %}
-      [<a class="publink" href="{{ entry.paper }}" target="_blank">paper</a>]
-      {% endif %}
-      {% if entry.html %}
-      [<a class="publink" href="{{ entry.html }}" target="_blank">HTML</a>]
-      {% endif %}
-      {% if entry.supp %}
-      [<a class="publink" href="{{ entry.supp | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}"
-        target="_blank">Supp</a>]
-      {% endif %}
-      {% if entry.poster %}
-      [<a class="publink" href="{{ entry.poster | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}"
-        target="_blank">Poster</a>]
-      {% endif %}
-      {% if entry.slides %}
-      [<a class="publink" href="{{ entry.slides | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}"
-        target="_blank">Slides</a>]
-      {% endif %}
-      {% if entry.code %}
-      [<a class="publink" href="{{ entry.code }}" target="_blank">code</a>]
-      {% endif %}
-      {% comment %} [<a class="bibtex publink">bibtex</a>] {% endcomment %}
+      {% if entry.abstract %} [<a class="abstract publink">abstract</a>] {%
+      endif %} {% if entry.arxiv %} [<a
+        class="publink"
+        href="http://arxiv.org/abs/{{ entry.arxiv }}"
+        target="_blank"
+        >arXiv</a
+      >] {% endif %} {% if entry.paper %} [<a
+        class="publink"
+        href="{{ entry.paper }}"
+        target="_blank"
+        >paper</a
+      >] {% endif %} {% if entry.html %} [<a
+        class="publink"
+        href="{{ entry.html }}"
+        target="_blank"
+        >HTML</a
+      >] {% endif %} {% if entry.supp %} [<a
+        class="publink"
+        href="{{ entry.supp | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}"
+        target="_blank"
+        >Supp</a
+      >] {% endif %} {% if entry.poster %} [<a
+        class="publink"
+        href="{{ entry.poster | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}"
+        target="_blank"
+        >Poster</a
+      >] {% endif %} {% if entry.slides %} [<a
+        class="publink"
+        href="{{ entry.slides | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}"
+        target="_blank"
+        >Slides</a
+      >] {% endif %} {% if entry.code %} [<a
+        class="publink"
+        href="{{ entry.code }}"
+        target="_blank"
+        >code</a
+      >] {% endif %} {% comment %} [<a class="bibtex publink">bibtex</a>] {%
+      endcomment %}
     </span>
 
     <!-- Hidden abstract block -->
@@ -102,9 +102,10 @@
     </span>
     {% endif %}
     <!-- Hidden abstract block -->
-    {% comment %} <span class="bibtex hidden">
+    {% comment %}
+    <span class="bibtex hidden">
       <pre>{{ entry.bibtex }}</pre>
-    </span> {% endcomment %}
+    </span>
+    {% endcomment %}
   </div>
-
 </div>

@@ -1,8 +1,9 @@
 ---
-layout: page
-permalink: /cv/
-title: CV
-nav: cv
+#Corrupted header to disable.
+# layout: page
+# permalink: /cv/
+# title: CV
+# nav: cv
 ---
 
 <!-- Place PDF download link at the top right. -->

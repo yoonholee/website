@@ -11,8 +11,8 @@ a,
 table.table a {
   color: $theme-color;
   &:hover {
-    color: $theme-color-dark;
-    font-weight: 400;
+    // font-weight: 400;
+    color: $text-color;
     text-decoration: underline;
   }
 }
@@ -245,12 +245,6 @@ footer.sticky-bottom {
   }
 }
 
-// Badge
-.my-badge {
-  color: $theme-color !important;
-  background-color: $theme-color-light;
-}
-
 // Publications
 .publications {
   margin-top: 2rem;
@@ -275,7 +269,8 @@ footer.sticky-bottom {
         abbr {
           display: inline-block;
           background-color: $theme-color-light;
-          color: $theme-color !important;
+          color: $theme-color;
+          // color: $theme-color !important;
           padding-left: 1rem;
           padding-right: 1rem;
         }
@@ -308,6 +303,10 @@ footer.sticky-bottom {
       a.bibtex {
         color: $theme-color;
         cursor: pointer;
+        &:hover {
+          color: $text-color;
+          text-decoration: underline;
+        }
       }
       .hidden {
         font-size: 0.875rem;
@@ -340,4 +339,18 @@ footer.sticky-bottom {
       }
     }
   }
+}
+
+// Badge
+.publications ol.bibliography li .abbr .my-badge,
+.my-badge {
+  font-weight: 500;
+  font-size: 0.8rem;
+  border-radius: 0.125rem;
+  color: $white-color;
+  background-color: $theme-color-dark;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  display: inline-block;
+  box-shadow: 0.15rem 0.15rem 0.2rem #aaaaaa;
 }
