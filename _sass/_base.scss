@@ -2,6 +2,9 @@
  * Styles for the base elements of the theme.
  ******************************************************************************/
 // Typography
+body {
+  font-family: "Poppins", sans-serif;
+}
 
 a:hover {
   transition: none;
