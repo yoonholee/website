@@ -6,10 +6,10 @@ title: Yoonho Lee
 email: yoonholee95@gmail.com
 description: > # this means to ignore newlines until "url:"
   Personal website
-footer_text: >
-  Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> 
-  with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+# footer_text: >
+#   Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a>
+#   with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
+#   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 
 url: # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/
@@ -19,8 +19,8 @@ last_updated: 2020/08/12 # set to true if you want to display last updated in th
 # Layout
 # -----------------------------------------------------------------------------
 
-navbar_fixed: true
-footer_fixed: true
+navbar_fixed: false
+footer_fixed: false
 # TODO: add layout settings (single page vs. multi-page)
 
 # -----------------------------------------------------------------------------
@@ -38,7 +38,7 @@ og_image: # The site-wide (default for all links) Open Graph preview image
 
 github_username: yoonholee # your GitHub user name
 twitter_username: yoonholeee # your Twitter handle
-linkedin_username: yoonholee # your LinkedIn user name
+# linkedin_username: yoonholee # your LinkedIn user name
 scholar_userid: BAAZ_ysAAAAJ # your Google Scholar ID
 orcid_id: # your ORCID ID
 medium_username: # your Medium username

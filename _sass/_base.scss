@@ -39,6 +39,7 @@ table.table a {
 // Profile
 
 .profile {
+  width: 20%;
   .address {
     font-family: monospace;
     font-size: 1.2rem;
@@ -125,11 +126,18 @@ table.table a {
 // News
 .news table td {
   font-size: 1rem;
+  p {
+    margin-bottom: 0.3rem;
+  }
+}
+
+.news table {
+  border-spacing: 0rem;
 }
 
 .news table.table-sm th,
 .news table.table-sm td {
-  padding: 0.2rem 0rem;
+  padding: 0 0.3rem;
 }
 
 // Social (bottom)
@@ -337,11 +345,16 @@ footer.sticky-bottom {
       }
       span.abstract.hidden.open {
         padding: 0.3rem 0.6rem;
-        background-color: $theme-color-light;
+        background-color: $theme-color-clear;
         border-radius: 1rem;
       }
     }
   }
+}
+
+div:target {
+  background-color: $theme-color-clear;
+  border-radius: 0.5rem;
 }
 
 // Badge

@@ -12,29 +12,22 @@ layout: default
   </header>
 
   <article>
-    <div class="row">
-      <div class="col">{{ content }}</div>
-      {% if page.profile %}
-      <div
-        class="profile col-4 {% if page.profile.align == 'left' %}order-first{% endif %}"
-      >
-        {% comment %} Styling for the image on the front page {% endcomment %}
-        <style>
-          .img-fluid {
-            max-width: 70%;
-          }
-        </style>
-        {% if page.profile.image %}
-        <img
-          class="img-fluid z-depth-1 rounded"
-          src="{{ page.profile.image | prepend: '/assets/img/' | relative_url }}"
-        />
-        {% endif %} {% if page.profile.address %}
-        <div class="address">{{ page.profile.address }}</div>
-        {% endif %}
-      </div>
+    {% if page.profile %}
+    <div
+      class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}"
+    >
+      {% if page.profile.image %}
+      <img
+        class="img-fluid z-depth-1 rounded"
+        src="{{ page.profile.image | prepend: '/assets/img/' | relative_url }}"
+      />
+      {% endif %} {% if page.profile.address %}
+      <div class="address">{{ page.profile.address }}</div>
       {% endif %}
     </div>
+    {% endif %}
+
+    <div class="clearfix">{{ content }}</div>
 
     {% if page.news %} {% include news.html %} {% endif %} {% if page.social %}
     <div class="social">

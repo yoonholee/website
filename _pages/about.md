@@ -7,12 +7,13 @@ permalink: /
 profile:
   align: right
   image: prof_pic.jpg
-  # address: >
+  address: >
   #   <p>555 your office number</p>
   #   <p>123 your address street</p>
   #   <p>Your City, State 12345</p>
 
 news: true
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true
 ---
 
@@ -22,10 +23,9 @@ I also hold a bachelor's degree in [mathematics](http://math.postech.ac.kr/) fro
 
 My research interests include:
 
-- meta-learning
-- generalization of deep networks
-- information theory
-- deep generative models
+- Generalization of Deep Networks ([NeurIPS20a](/publications/#lee2020neural))
+- Meta-learning ([ICML18](/publications/#lee2018gradient), [arXiv19](/publications/#lee2019discrete), [NeurIPS20b](/publications/#lee2020bootstrapping))
+- Attention Mechanisms ([ICML19](/publications/#pmlr-v97-lee19d), [NeurIPS19](/publications/#kim2019learning), [NeurIPS19-W](/publications/#lee2019deep))
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com){:target="\_blank"}. You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
