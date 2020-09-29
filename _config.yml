@@ -11,7 +11,7 @@ description: > # this means to ignore newlines until "url:"
 #   with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
 #   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 
-url: https://yoonholee.com # the base hostname & protocol for your site
+url: # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/
 last_updated: 2020/08/12 # set to true if you want to display last updated in the footer
 
