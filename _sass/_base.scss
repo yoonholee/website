@@ -39,7 +39,9 @@ table.table a {
 // Profile
 
 .profile {
-  width: 20%;
+  // width: 20%;
+  width: 7rem;
+  margin-left: 0.5rem;
   .address {
     font-family: monospace;
     font-size: 1.2rem;
@@ -258,7 +260,7 @@ footer.sticky-bottom {
 
 // Publications
 .publications {
-  margin-top: 2rem;
+  margin-top: 1rem;
   h2.year {
     color: $grey-color-light;
     border-top: 1px solid $grey-color-light;
@@ -272,19 +274,16 @@ footer.sticky-bottom {
     padding: 0;
     margin-top: 0;
 
+    .row {
+      margin-bottom: 1.2rem; // distance between publications
+    }
+
     li {
       margin-bottom: 1rem;
       .abbr {
-        height: 2rem;
-        margin-bottom: 0.5rem;
-        abbr {
-          display: inline-block;
-          background-color: $theme-color-light;
-          color: $theme-color;
-          // color: $theme-color !important;
-          padding-left: 1rem;
-          padding-right: 1rem;
-        }
+        // space around publication badges.
+        height: 1.5rem;
+        margin-bottom: 0.1rem;
       }
       span {
         display: block;
@@ -361,12 +360,11 @@ div:target {
 .publications ol.bibliography li .abbr .my-badge,
 .my-badge {
   font-weight: 500;
-  font-size: 0.8rem;
-  border-radius: 0.125rem;
   color: $white-color;
   background-color: $theme-color-dark;
-  padding-left: 0.8rem;
-  padding-right: 0.8rem;
+  font-size: 0.75rem;
+  border-radius: 0.2rem;
   display: inline-block;
   box-shadow: 0.15rem 0.15rem 0.2rem #aaaaaa;
+  padding: 0rem 0.8rem;
 }
