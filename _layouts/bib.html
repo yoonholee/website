@@ -1,7 +1,7 @@
 ---
 ---
 
-<div class="row">
+<div class="row publication-row" id="{{entry.key}}">
   <div class="col-sm-2 abbr">
     {% if entry.abbr %} {% if site.data.venues[entry.abbr] %}
     <abbr class="my-badge">{{entry.abbr}}</abbr>
@@ -10,7 +10,7 @@
     {% endif %} {% endif %}
   </div>
 
-  <div id="{{entry.key}}" class="col-sm-8">
+  <div class="col-sm-8">
     {% if entry.type == "thesis" %} {{reference}} {% else %}
     <span class="title">{{entry.title}}</span>
     <span class="author">
@@ -98,16 +98,11 @@
     {% if entry.abstract %}
     <span class="abstract hidden">
       <p>
-        <strong>TLDR: {{ entry.tldr }}</strong><br />
-        {{entry.abstract }}
+        TLDR:
+        <strong>{{ entry.tldr }}</strong>
       </p>
+      <p>{{entry.abstract }}</p>
     </span>
     {% endif %}
-    <!-- Hidden abstract block -->
-    {% comment %}
-    <span class="bibtex hidden">
-      <pre>{{ entry.bibtex }}</pre>
-    </span>
-    {% endcomment %}
   </div>
 </div>

@@ -8,7 +8,7 @@
   year     = {2020},
   month    = {8},
   paper    = {https://arxiv.org/abs/2008.02953},
-  tldr     = {We meta-learn a network which can predict the generalization gap of other networks},
+  tldr     = {Our model learns to predict the generalization gap of other networks.},
   abstract = {
     While various complexity measures for diverse model classes have been proposed, specifying an appropriate measure capable of predicting and explaining generalization in deep networks has proven to be challenging. We propose Neural Complexity (NC), an alternative data-driven approach that meta-learns a scalar complexity measure through interactions with a large number of heterogeneous tasks. The trained NC model can be added to the standard training loss to regularize any task learner under standard learning frameworks. We contrast NC's approach against existing manually-designed complexity measures and also against other meta-learning models, and validate NC's performance on multiple regression and classification tasks. }
 }
@@ -21,7 +21,7 @@
   year     = {2020},
   month    = {8},
   paper    = {https://arxiv.org/abs/2008.02956},
-  tldr     = {We estimate uncertainty by feeding bootstrapped datasets into a Neural Process.},
+  tldr     = {We estimate uncertainty in a Neural Process using bootstrapping.},
   abstract = {Unlike in the traditional statistical modeling for which a user typically hand-specify a prior, Neural Processes (NPs) implicitly define a broad class of stochastic processes with neural networks. Given a data stream, NP learns a stochastic process that best describes the data. While this "data-driven" way of learning stochastic processes has proven to handle various types of data, NPs still relies on an assumption that uncertainty in stochastic processes is modeled by a single latent variable, which potentially limits the flexibility. To this end, we propose the Bootstrapping Neural Process (BNP), a novel extension of the NP family using the bootstrap. The bootstrap is a classical data-driven technique for estimating uncertainty, which allows BNP to learn the stochasticity in NPs without assuming a particular form. We demonstrate the efficacy of BNP on various types of data and its robustness in the presence of model-data mismatch.}
 }
 
@@ -54,7 +54,7 @@
   month    = {9},
   journal  = {Sets and Parts Workshop @ NeurIPS 2019 (oral)},
   paper    = {https://arxiv.org/abs/1909.13433},
-  tldr     = {We learn to identify one cluster at a time.},
+  tldr     = {Our methods learns to cluster by identifying one cluster at a time.},
   abstract = {We propose Deep Amortized Clustering (DAC), a framework in which a neural network learns to cluster datasets efficiently using a few forward passes through a deep neural network. DAC implicitly learns what makes a cluster, how to group data points into clusters, and how to count the number of clusters in datasets. DAC is meta-learned in a data-driven way, using only clustered datasets and their partitions. This framework differs from traditional clustering algorithms, which usually require user-specified prior knowledge about the shape or structure of clusters. We empirically show on both synthetic and image data that DAC can efficiently and accurately cluster novel datasets.}
 }
 
