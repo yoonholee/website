@@ -1,8 +1,8 @@
 $(document).ready(function () {
-  $("a.abstract").click(function () {
+  // Use abstract button to open and close
+  $("a.abstract.publink").click(function () {
     $(this).parent().parent().find(".abstract.hidden").toggleClass("open");
   });
-  $("a.bibtex").click(function () {
-    $(this).parent().parent().find(".bibtex.hidden").toggleClass("open");
-  });
+  // Open abstract when targeted (#bibkey in url)
+  $("div.row.publication-row:target").find(".abstract.hidden").addClass("open");
 });

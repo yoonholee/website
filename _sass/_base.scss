@@ -327,7 +327,7 @@ footer.sticky-bottom {
   }
   .abstract.hidden {
     max-height: 0; // hidden with zero height
-    transition: all 0.6s ease-in-out;
+    transition: all 0.4s ease-out;
 
     overflow: hidden;
     border-radius: 1rem;
@@ -335,23 +335,9 @@ footer.sticky-bottom {
   }
   .abstract.hidden.open {
     max-height: 100em;
-    transition: all 0.6s ease-in-out;
+    transition-delay: 0.3s;
+    transition: all 1.5s ease-in;
     padding: 0.3rem 0.6rem;
-  }
-}
-.publications .bibliography .publication-row:target {
-  scroll-snap-align: start;
-  background-color: $theme-color-clear;
-  overflow-x: hidden;
-  .abstract.hidden {
-    max-height: 100em;
-    transition: all 0.6s ease-in-out;
-    padding: 0.3rem 0.6rem;
-  }
-  .abstract.hidden.open {
-    max-height: 0;
-    transition: all 0.6s ease-in-out;
-    padding: 0rem;
   }
 }
 
