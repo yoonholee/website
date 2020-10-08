@@ -327,7 +327,7 @@ footer.sticky-bottom {
   }
   .abstract.hidden {
     max-height: 0; // hidden with zero height
-    transition: all 0.4s ease-out;
+    transition: all 0.5s ease-out;
 
     overflow: hidden;
     border-radius: 1rem;
@@ -336,7 +336,7 @@ footer.sticky-bottom {
   .abstract.hidden.open {
     max-height: 100em;
     transition-delay: 0.3s;
-    transition: all 1.5s ease-in;
+    transition: all 1s ease-in;
     padding: 0.3rem 0.6rem;
   }
 }
