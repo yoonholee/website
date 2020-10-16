@@ -51,12 +51,10 @@
     {% endif %}
 
     <span class="links">
-      <!-- {% if entry.abstract %}
-      [<a class="abstract">Abs</a>]
-      {% endif %} -->
-
-      {% if entry.abstract %} [<a class="abstract publink">abstract</a>] {%
-      endif %} {% if entry.arxiv %} [<a
+      {% if entry.abstract %} 
+      [<a class="abstract publink">abstract</a>] 
+      {% endif %} 
+      {% if entry.arxiv %} [<a
         class="publink"
         href="http://arxiv.org/abs/{{ entry.arxiv }}"
         target="_blank"
@@ -92,6 +90,9 @@
         target="_blank"
         >code</a
       >] {% endif %}
+      {% if entry.bib %} 
+      [<a class="bib publink">bibtex</a>] 
+      {% endif %} 
     </span>
 
     <!-- Hidden abstract block -->
@@ -102,6 +103,11 @@
         <strong>{{ entry.tldr }}</strong>
       </p>
       <p>{{entry.abstract }}</p>
+    </span>
+    {% endif %} 
+    {% if entry.bib %}
+    <span class="bib hidden">
+      <p>{{entry.bib }}</p>
     </span>
     {% endif %}
   </div>

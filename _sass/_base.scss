@@ -13,7 +13,8 @@ a:hover {
 
 a,
 table.table a {
-  color: $link-color;
+  // color: $link-color;
+  color: $theme-color-dark;
   &:hover {
     color: $text-color;
     text-decoration: underline;
@@ -305,7 +306,7 @@ footer.sticky-bottom {
         font-style: normal;
       }
       a.abstract,
-      a.bibtex {
+      a.bib {
         color: $link-color;
         cursor: pointer;
         &:hover {
@@ -319,13 +320,15 @@ footer.sticky-bottom {
 
 // Collapsible Abstract
 .publications .bibliography .publication-row {
-  .abstract p {
+  .abstract p,
+  .bib p {
     line-height: 1.4em;
     margin: 0.8em;
     font-size: 0.85rem;
     text-align: justify;
   }
-  .abstract.hidden {
+  .abstract.hidden,
+  .bib.hidden {
     max-height: 0; // hidden with zero height
     transition: all 0.5s ease-out;
 
@@ -333,7 +336,8 @@ footer.sticky-bottom {
     border-radius: 1rem;
     background-color: $theme-color-clear;
   }
-  .abstract.hidden.open {
+  .abstract.hidden.open,
+  .bib.hidden.open {
     max-height: 100em;
     transition-delay: 0.3s;
     transition: all 1s ease-in;
