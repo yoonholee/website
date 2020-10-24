@@ -24,11 +24,6 @@ I completed my B.S. degree in the department of Mathematics at POSTECH.
 My research interests include:
 
 - Generalization of Deep Networks [[NeurIPS20a](/publications/#lee2020neural)]
-- Meta-learning [[ICML18](/publications/#lee2018gradient), [arXiv19](/publications/#lee2019discrete), [NeurIPS20b](/publications/#lee2020bootstrapping)]
-- Attention Mechanisms [[ICML19](/publications/#pmlr-v97-lee19d), [NeurIPS19](/publications/#kim2019learning), [NeurIPS19-W](/publications/#lee2019deep)]
-
-<!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com){:target="\_blank"}. You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
-
-Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/){:target="\_blank"} and [Academicons](https://jpswalsh.github.io/academicons/){:target="\_blank"}, like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them. -->
+- Meta-learning [[ICML18](/publications/#lee2018gradient), [pre19](/publications/#lee2019discrete), [NeurIPS20b](/publications/#lee2020bootstrapping)]
+- Attention Mechanisms [[ICML19](/publications/#pmlr-v97-lee19d), [NeurIPS19](/publications/#kim2019learning), [NeurIPS19-W](/publications/#lee2019deep), [pre20](/publications/#pakman2020ACP)]
+- Knowledge Distillation [[pre20](/publications/#seo2020penultimate)]

@@ -1,48 +1,34 @@
 % Encoding: UTF-8
 
-@article{lee2020neural,
+@article{kim2019learning,
   abbr     = {NeurIPS},
-  title    = {Neural Complexity Measures},
-  author   = {Yoonho Lee and Juho Lee and Sung Ju Hwang and Eunho Yang and Seungjin Choi},
-  journal  = {NeurIPS 2020},
-  year     = {2020},
-  month    = {8},
-  paper    = {https://arxiv.org/abs/2008.02953},
-  tldr     = {Our model learns to predict the generalization gap of other networks.},
-  abstract = {
-    While various complexity measures for diverse model classes have been proposed, specifying an appropriate measure capable of predicting and explaining generalization in deep networks has proven to be challenging. We propose Neural Complexity (NC), an alternative data-driven approach that meta-learns a scalar complexity measure through interactions with a large number of heterogeneous tasks. The trained NC model can be added to the standard training loss to regularize any task learner under standard learning frameworks. We contrast NC's approach against existing manually-designed complexity measures and also against other meta-learning models, and validate NC's performance on multiple regression and classification tasks. }
-}
-
-@article{lee2020bootstrapping,
-  abbr     = {NeurIPS},
-  title    = {Bootstrapping Neural Processes},
-  author   = {Juho Lee* and Yoonho Lee* and Jungtaek Kim and Eunho Yang and Sung Ju Hwang and Yee Whye Teh},
-  journal  = {NeurIPS 2020},
-  year     = {2020},
-  month    = {8},
-  paper    = {https://arxiv.org/abs/2008.02956},
-  tldr     = {We estimate uncertainty in a Neural Process using bootstrapping.},
-  abstract = {Unlike in the traditional statistical modeling for which a user typically hand-specify a prior, Neural Processes (NPs) implicitly define a broad class of stochastic processes with neural networks. Given a data stream, NP learns a stochastic process that best describes the data. While this "data-driven" way of learning stochastic processes has proven to handle various types of data, NPs still relies on an assumption that uncertainty in stochastic processes is modeled by a single latent variable, which potentially limits the flexibility. To this end, we propose the Bootstrapping Neural Process (BNP), a novel extension of the NP family using the bootstrap. The bootstrap is a classical data-driven technique for estimating uncertainty, which allows BNP to learn the stochasticity in NPs without assuming a particular form. We demonstrate the efficacy of BNP on various types of data and its robustness in the presence of model-data mismatch.}
-}
-
-@article{seo2020penultimate,
-  title    = {On the Distribution of Penultimate Activations of Classification Networks},
-  author   = {Seo*, Minkyo and Lee*, Yoonho and Kwak, Suha},
-  year     = {2020},
-  month    = {2},
-  tldr     = {We extract class information from final FC layer weights.},
-  abstract = {This paper studies probability distributions of penultimate activations of deep classification networks. We first identify that learning a classification network with the cross-entropy loss makes its (normalized) penultimate activations follow a von Mises-Fisher distribution for each class, which is parameterized by weights of its final fully-connected layer. Through this analysis, we derive a probability density function of penultimate activations per class. This generative model allows to synthesize activations of classification networks without feeding images forward through them. We also demonstrate through experiments that our generative model of penultimate activations can be used for knowledge distillation and class-conditional image generation.}
-}
-
-@article{lee2019discrete,
-  title    = {Discrete Infomax Codes for Supervised Representation Learning},
-  author   = {Lee, Yoonho and Kim, Wonjae and Park, Wonpyo and Choi, Seungjin},
-  journal  = {arXiv:1905.11656},
+  title    = {Learning Dynamics of Attention: Human Prior for Interpretable Machine Reasoning},
+  author   = {Kim, Wonjae and Lee, Yoonho},
+  journal  = {NeurIPS 2019},
   year     = {2019},
-  month    = {10},
-  paper    = {https://arxiv.org/abs/1905.11656},
-  tldr     = {We regularize few-shot classification using compact discrete codes.},
-  abstract = {Learning compact discrete representations of data is a key task on its own or for facilitating subsequent processing of data. In this paper we present a model that produces Discrete InfoMax COdes (DIMCO); we learn a probabilistic encoder that yields k-way d-dimensional codes associated with input data. Our model’s learning objective is to maximize the mutual information between codes and labels with a regularization, which enforces entries of a codeword to be as independent as possible. We show that the infomax principle also justiﬁes previous loss functions (e.g., cross-entropy) as its special cases. Our analysis also shows that using shorter codes, as DIMCO does, reduces overﬁtting in the conext of few-shot classiﬁcation. Through experiments in various domains, we observe this implicit meta-regularization effect of DIMCO. Furthermore, we show that the codes learned by DIMCO are efﬁcient in terms of both memory and retrieval time compared to previous methods.},
+  month    = {6},
+  paper    = {https://arxiv.org/abs/1905.11666},
+  code     = {https://github.com/kakao/DAFT},
+  tldr     = {Smooth attention is interpretable.},
+  abstract = {Without relevant human priors, neural networks may learn uninterpretable features. We propose Dynamics of Attention for Focus Transition (DAFT) as a human prior for machine reasoning. DAFT is a novel method that regularizes attention-based reasoning by modelling it as a continuous dynamical system using neural ordinary differential equations. As a proof of concept, we augment a state-of-the-art visual reasoning model with DAFT. Our experiments reveal that applying DAFT yields similar performance to the original model while using fewer reasoning steps, showing that it implicitly learns to skip unnecessary steps. We also propose a new metric, Total Length of Transition (TLT), which represents the effective reasoning step size by quantifying how much a given model's focus drifts while reasoning about a question. We show that adding DAFT results in lower TLT, demonstrating that our method indeed obeys the human prior towards shorter reasoning paths in addition to producing more interpretable attention maps.}
+}
+
+@article{lee2018gradient,
+  abbr     = {ICML},
+  author   = {9ee, Yoonho and Choi, Seungjin},
+  title    = {Gradient-based Meta-learning with Learned Layerwise Metric and Subspace},
+  journal  = {ICML 2018},
+  year     = {2018},
+  paper    = {http://proceedings.mlr.press/v80/lee18a/lee18a.pdf},
+  code     = {https://github.com/yoonholee/MT-net},
+  tldr     = {We architecturally separate task-general and task-specific learning in MAML.},
+  abstract = {
+    Gradient-based meta-learning methods leverage gradient descent to learn the commonalities among various tasks. 
+    While previous such methods have been successful in meta-learning tasks, they resort to simple gradient descent during meta-testing. 
+    Our primary contribution is the MT-net, which enables the meta-learner to learn on each layer's activation space a subspace that the task-specific learner performs gradient descent on. 
+    Additionally, a task-specific learner of an MT-net performs gradient descent with respect to a meta-learned distance metric, which warps the activation space to be more sensitive to task identity. 
+    We demonstrate that the dimension of this learned subspace reflects the complexity of the task-specific learner's adaptation task, and also that our model is less sensitive to the choice of initial learning rates than previous gradient-based meta-learning methods. 
+    Our method achieves state-of-the-art or comparable performance on few-shot classification and regression tasks.},
   selected = {yes}
 }
 
@@ -58,17 +44,52 @@
   abstract = {We propose Deep Amortized Clustering (DAC), a framework in which a neural network learns to cluster datasets efficiently using a few forward passes through a deep neural network. DAC implicitly learns what makes a cluster, how to group data points into clusters, and how to count the number of clusters in datasets. DAC is meta-learned in a data-driven way, using only clustered datasets and their partitions. This framework differs from traditional clustering algorithms, which usually require user-specified prior knowledge about the shape or structure of clusters. We empirically show on both synthetic and image data that DAC can efficiently and accurately cluster novel datasets.}
 }
 
-@article{kim2019learning,
-  abbr     = {NeurIPS},
-  title    = {Learning Dynamics of Attention: Human Prior for Interpretable Machine Reasoning},
-  author   = {Kim, Wonjae and Lee, Yoonho},
-  journal  = {NeurIPS 2019},
+@article{lee2019discrete,
+  title    = {Discrete Infomax Codes for Supervised Representation Learning},
+  author   = {Lee, Yoonho and Kim, Wonjae and Park, Wonpyo and Choi, Seungjin},
+  journal  = {arXiv:1905.11656},
   year     = {2019},
-  month    = {6},
-  paper    = {https://arxiv.org/abs/1905.11666},
-  code     = {https://github.com/kakao/DAFT},
-  tldr     = {Smooth attention is interpretable.},
-  abstract = {Without relevant human priors, neural networks may learn uninterpretable features. We propose Dynamics of Attention for Focus Transition (DAFT) as a human prior for machine reasoning. DAFT is a novel method that regularizes attention-based reasoning by modelling it as a continuous dynamical system using neural ordinary differential equations. As a proof of concept, we augment a state-of-the-art visual reasoning model with DAFT. Our experiments reveal that applying DAFT yields similar performance to the original model while using fewer reasoning steps, showing that it implicitly learns to skip unnecessary steps. We also propose a new metric, Total Length of Transition (TLT), which represents the effective reasoning step size by quantifying how much a given model's focus drifts while reasoning about a question. We show that adding DAFT results in lower TLT, demonstrating that our method indeed obeys the human prior towards shorter reasoning paths in addition to producing more interpretable attention maps.}
+  month    = {10},
+  paper    = {https://arxiv.org/abs/1905.11656},
+  tldr     = {We regularize few-shot classification using compact discrete codes.},
+  abstract = {Learning compact discrete representations of data is a key task on its own or for facilitating subsequent processing of data. In this paper we present a model that produces Discrete InfoMax COdes (DIMCO); we learn a probabilistic encoder that yields k-way d-dimensional codes associated with input data. Our model’s learning objective is to maximize the mutual information between codes and labels with a regularization, which enforces entries of a codeword to be as independent as possible. We show that the infomax principle also justiﬁes previous loss functions (e.g., cross-entropy) as its special cases. Our analysis also shows that using shorter codes, as DIMCO does, reduces overﬁtting in the conext of few-shot classiﬁcation. Through experiments in various domains, we observe this implicit meta-regularization effect of DIMCO. Furthermore, we show that the codes learned by DIMCO are efﬁcient in terms of both memory and retrieval time compared to previous methods.},
+  selected = {yes}
+}
+
+@article{lee2020bootstrapping,
+  abbr     = {NeurIPS},
+  title    = {Bootstrapping Neural Processes},
+  author   = {Juho Lee* and Yoonho Lee* and Jungtaek Kim and Eunho Yang and Sung Ju Hwang and Yee Whye Teh},
+  journal  = {NeurIPS 2020},
+  year     = {2020},
+  month    = {8},
+  paper    = {https://arxiv.org/abs/2008.02956},
+  tldr     = {We estimate uncertainty in a Neural Process using bootstrapping.},
+  abstract = {Unlike in the traditional statistical modeling for which a user typically hand-specify a prior, Neural Processes (NPs) implicitly define a broad class of stochastic processes with neural networks. Given a data stream, NP learns a stochastic process that best describes the data. While this "data-driven" way of learning stochastic processes has proven to handle various types of data, NPs still relies on an assumption that uncertainty in stochastic processes is modeled by a single latent variable, which potentially limits the flexibility. To this end, we propose the Bootstrapping Neural Process (BNP), a novel extension of the NP family using the bootstrap. The bootstrap is a classical data-driven technique for estimating uncertainty, which allows BNP to learn the stochasticity in NPs without assuming a particular form. We demonstrate the efficacy of BNP on various types of data and its robustness in the presence of model-data mismatch.}
+}
+
+@article{lee2020neural,
+  abbr     = {NeurIPS},
+  title    = {Neural Complexity Measures},
+  author   = {Yoonho Lee and Juho Lee and Sung Ju Hwang and Eunho Yang and Seungjin Choi},
+  journal  = {NeurIPS 2020},
+  year     = {2020},
+  month    = {8},
+  paper    = {https://arxiv.org/abs/2008.02953},
+  tldr     = {A meta-learning framework for predicting generalization.},
+  abstract = {
+    While various complexity measures for diverse model classes have been proposed, specifying an appropriate measure capable of predicting and explaining generalization in deep networks has proven to be challenging. We propose Neural Complexity (NC), an alternative data-driven approach that meta-learns a scalar complexity measure through interactions with a large number of heterogeneous tasks. The trained NC model can be added to the standard training loss to regularize any task learner under standard learning frameworks. We contrast NC's approach against existing manually-designed complexity measures and also against other meta-learning models, and validate NC's performance on multiple regression and classification tasks. }
+}
+
+@article{pakman2020ACP,
+  title    = {Attentive Clustering Processes},
+  author   = {Ari Pakman* and Yueqi Wang* and Yoonho Lee and Pallab Basu and Juho Lee and Yee Whye Teh and Liam Paninski},
+  year     = {2020},
+  month    = {10},
+  tldr     = {Attention solves the underfitting issue in amortized probabilistic clustering.},
+  abstract = {
+    Amortized approaches to clustering have recently received renewed attention thanks to novel objective functions that exploit the expressiveness of deep learning models. In this work we revisit a recent proposal for fast amortized probabilistic clustering, the Clusterwise Clustering Process (CCP), which yields samples from the posterior distribution of cluster labels for sets of arbitrary size using only O(K) forward network evaluations, where K is an arbitrary number of clusters. While adequate in simple datasets, we show that the model can severely underfit complex datasets, and hypothesize that this limitation can be traced back to the implicit assumption that the probability of a point joining a cluster is equally sensitive to all the points available to join the same cluster. We propose an improved model, the Attentive Clustering Process (ACP), that selectively pays more attention to relevant points while preserving the invariance properties of the generative model. We illustrate the advantages of the new model in applications to spike-sorting in multi-electrode arrays and community discovery in networks. The latter case combines the ACP model with graph convolutional networks, and is the first deep learning model that handles an arbitrary number of communities.
+    }
 }
 
 @article{pmlr-v97-lee19d,
@@ -84,23 +105,15 @@
   abstract = {Many machine learning tasks such as multiple instance learning, 3D shape recognition, and few-shot image classification are defined on sets of instances. Since solutions to such problems do not depend on the order of elements of the set, models used to address them should be permutation invariant. We present an attention-based neural network module, the Set Transformer, specifically designed to model interactions among elements in the input set. The model consists of an encoder and a decoder, both of which rely on attention mechanisms. In an effort to reduce computational complexity, we introduce an attention scheme inspired by inducing point methods from sparse Gaussian process literature. It reduces the computation time of self-attention from quadratic to linear in the number of elements in the set. We show that our model is theoretically attractive and we evaluate it on a range of tasks, demonstrating the state-of-the-art performance compared to recent methods for set-structured data.}
 }
 
-@article{lee2018gradient,
-  abbr     = {ICML},
-  author   = {Lee, Yoonho and Choi, Seungjin},
-  title    = {Gradient-based Meta-learning with Learned Layerwise Metric and Subspace},
-  journal  = {ICML 2018},
-  year     = {2018},
-  paper    = {http://proceedings.mlr.press/v80/lee18a/lee18a.pdf},
-  code     = {https://github.com/yoonholee/MT-net},
-  tldr     = {We architecturally separate task-general and task-specific learning in MAML.},
+@article{seo2020penultimate,
+  title    = {On the Distribution of Penultimate Activations of Classification Networks},
+  author   = {Seo*, Minkyo and Lee*, Yoonho and Kwak, Suha},
+  year     = {2020},
+  month    = {1},
+  tldr     = {We extract class information from final FC layer weights.},
   abstract = {
-    Gradient-based meta-learning methods leverage gradient descent to learn the commonalities among various tasks. 
-    While previous such methods have been successful in meta-learning tasks, they resort to simple gradient descent during meta-testing. 
-    Our primary contribution is the MT-net, which enables the meta-learner to learn on each layer's activation space a subspace that the task-specific learner performs gradient descent on. 
-    Additionally, a task-specific learner of an MT-net performs gradient descent with respect to a meta-learned distance metric, which warps the activation space to be more sensitive to task identity. 
-    We demonstrate that the dimension of this learned subspace reflects the complexity of the task-specific learner's adaptation task, and also that our model is less sensitive to the choice of initial learning rates than previous gradient-based meta-learning methods. 
-    Our method achieves state-of-the-art or comparable performance on few-shot classification and regression tasks.},
-  selected = {yes}
+    This paper studies the probability distributions of penultimate activations of classification networks. Specifically, we show that the discriminative criterion applied to the final layer forms a Generative-Discriminative pair with a specific generative model of penultimate activations. This model is parameterized by the weights of the final fully-connected layer and can synthesize classification networks' activations without feeding input data. We empirically demonstrate that our generative model enables stable knowledge distillation in the presence of domain shift, and can also transfer knowledge from a classifier to variational autoencoders and generative adversarial networks for class-conditional image generation.
+    }
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}
