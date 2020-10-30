@@ -320,11 +320,16 @@ footer.sticky-bottom {
 
 // Collapsible Abstract
 .publications .bibliography .publication-row {
-  .abstract p,
-  .bib p {
+  .abstract p {
     line-height: 1.4em;
     margin: 0.8em;
     font-size: 0.85rem;
+    text-align: justify;
+  }
+  .bib pre {
+    line-height: 1.4em;
+    margin: 0.8em;
+    font-size: 0.7rem;
     text-align: justify;
   }
   .abstract.hidden,
