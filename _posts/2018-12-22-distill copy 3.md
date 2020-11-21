@@ -1,7 +1,6 @@
 ---
 layout: distill
 title: A distill-style blog post
-description: An example of a distill-style blog post and main elements. Long description of a distill-style blog post and main elements is available in the documentation for distill and the documentation for distill-style blog posts and the documentation for distill-style blog posts and the 
 date: 2018-12-22
 
 authors:

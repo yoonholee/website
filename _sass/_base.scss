@@ -195,18 +195,22 @@ footer.sticky-bottom {
   }
 }
 
+.separator {
+  color: #ccc;
+}
+
 .post-list {
   margin: 0;
   margin-bottom: 40px;
   padding: 0;
   li {
-    border-bottom: 1px solid $grey-color-light;
+    border-bottom: 1.2px solid #dddddd;
     list-style: none;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
     .post-meta {
       color: $grey-color;
-      font-size: 0.875rem;
+      font-size: 1rem;
       margin-bottom: 0;
     }
     a {
@@ -216,6 +220,7 @@ footer.sticky-bottom {
         color: $theme-color;
       }
     }
+    p { margin-bottom: 0;}
   }
 }
 
