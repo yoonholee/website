@@ -21,7 +21,9 @@ pagination:
           <span class="separator"> · </span>
           <span class="post-meta">{{ post.date | date: '%B %-d, %Y' }}</span> 
         </h4>
-        <p>{{ post.description }}</p>
+        {% if post.description %}
+          <p>{{ post.description }}</p>
+        {% endif %}
       </li>
     {% endfor %}
   </ul>

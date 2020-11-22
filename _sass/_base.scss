@@ -1,23 +1,27 @@
 /*******************************************************************************
  * Styles for the base elements of the theme.
  ******************************************************************************/
+
+// Always have margin at the bottom of the page.
+.container.mt-5 {
+  margin-bottom: 10rem;
+}
+
 // Typography
 body {
   font-family: "Poppins", sans-serif;
   // font-family: "Roboto", sans-serif;
 }
 
-a:hover {
-  transition: none;
-}
-
 a,
 table.table a {
   // color: $link-color;
   color: $theme-color-dark;
+
   &:hover {
     color: $text-color;
     text-decoration: underline;
+    transition: none;
   }
 }
 
@@ -39,9 +43,11 @@ table.table a {
 .profile {
   width: 8em;
   margin-left: 1em;
+
   .address {
     font-family: monospace;
     font-size: 1.2rem;
+
     p {
       margin: 0;
     }
@@ -49,39 +55,32 @@ table.table a {
 }
 
 // Navbar customization
-.navbar {
+
+.navbar.navbar-light {
   box-shadow: none;
   border-bottom: 1px solid $grey-color-light;
   opacity: 0.95;
-}
-.navbar.navbar-light {
+
   // Remove link decoration
-  a {
-    &:hover {
-      text-decoration: none;
-    }
-  }
+  // a &:hover {
+  //   text-decoration: none;
+  // }
+
+
   .navbar-nav .nav-item .nav-link {
     &:hover {
       color: $theme-color-dark;
       transition: none;
     }
   }
-  .navbar-nav .nav-item.active > .nav-link {
+
+  .navbar-nav .nav-item.active>.nav-link {
     background-color: inherit;
     color: $theme-color;
     font-weight: 500;
+
     &:hover {
       color: $theme-color;
-    }
-  }
-  .contact-icon {
-    font-size: 2rem;
-    a {
-      color: $grey-color-dark;
-      &:hover {
-        color: $theme-color;
-      }
     }
   }
 }
@@ -96,13 +95,16 @@ table.table a {
     margin-bottom: 4px;
     transition: all 0.2s;
   }
+
   .top-bar {
     transform: rotate(45deg);
     transform-origin: 10% 10%;
   }
+
   .middle-bar {
     opacity: 0;
   }
+
   .bottom-bar {
     transform: rotate(-45deg);
     transform-origin: 10% 90%;
@@ -113,207 +115,193 @@ table.table a {
   .top-bar {
     transform: rotate(0);
   }
+
   .middle-bar {
     opacity: 1;
   }
+
   .bottom-bar {
     transform: rotate(0);
   }
 }
 
 // News
-.news table td {
-  font-size: 1rem;
-  p {
-    margin-bottom: 0.3rem;
+.news {
+  margin-top: 2.5rem;
+
+  table {
+    border-spacing: 0rem;
+
+    td {
+      font-size: 1rem;
+
+      p {
+        margin-bottom: 0.3rem;
+      }
+    }
+  }
+
+  table.table-sm th,
+  table.table-sm td {
+    padding: 0 0.3rem;
   }
 }
 
-.news table {
-  border-spacing: 0rem;
-}
-
-.news table.table-sm th,
-.news table.table-sm td {
-  padding: 0 0.3rem;
-}
-
 // Social (bottom)
-
 .social {
+  margin-top: 1.5rem;
   text-align: center;
+
   .contact-icon {
-    font-size: 4rem;
+    font-size: 3.5rem;
+
     a {
       color: $grey-color-dark;
+
       &:hover {
         color: $theme-color;
       }
     }
   }
+
   .contact-note {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
   }
-}
-
-// Footer
-
-footer.fixed-bottom {
-  color: lighten($grey-color, 25%);
-  background-color: $grey-color-dark;
-  font-size: 0.75rem;
-  .container {
-    padding-top: 9px;
-    padding-bottom: 8px;
-  }
-  a {
-    color: white;
-    &:hover {
-      color: lighten($theme-color, 25%);
-      text-decoration: none;
-    }
-  }
-}
-
-footer.sticky-bottom {
-  border-top: 1px solid $grey-color-light;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  font-size: 0.9rem;
 }
 
 // Blog
-
-.header-bar {
-  border-bottom: 1px solid $grey-color-light;
-  text-align: center;
-  padding-top: 2rem;
-  padding-bottom: 5rem;
-  h1 {
-    color: $theme-color;
-    font-size: 5rem;
-  }
-}
-
-.separator {
-  color: #ccc;
-}
-
 .post-list {
-  margin: 0;
-  margin-bottom: 40px;
-  padding: 0;
+  padding: 0rem;
+
   li {
     border-bottom: 1.2px solid #dddddd;
     list-style: none;
     padding-top: 1.2rem;
     padding-bottom: 1.2rem;
+
     .post-meta {
       color: $grey-color;
       font-size: 1rem;
       margin-bottom: 0;
     }
-    a {
-      color: black;
-      text-decoration: none;
-      &:hover {
-        color: $theme-color;
+
+    h4 {
+      margin-bottom: 0;
+
+      a {
+        color: black;
+        text-decoration: none;
+
+        &:hover {
+          color: $theme-color;
+        }
       }
     }
-    p { margin-bottom: 0;}
+
+    p {
+      margin-top: 0.5rem;
+      margin-bottom: 0;
+    }
+
+    h4 .separator {
+      color: #ccc;
+    }
   }
 }
 
 .pagination .page-item.active .page-link {
   background-color: $theme-color;
+
   &:hover {
     background-color: $theme-color;
   }
 }
 
 // Distill
+.post.distill {
+  hr{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  a {
+  color: $theme-color-dark;
+  border-bottom: 0px;
 
-.distill {
-  a:hover {
-    border-bottom-color: $theme-color;
-    text-decoration: none;
+  &:hover {
+    color: $text-color;
+    text-decoration: underline;
+    transition: none;
+    border-bottom: 0px;
   }
 }
-
-// Projects
-
-.projects {
-  .grid-item {
-    width: 250px;
-    margin-bottom: 10px;
-    a {
-      color: black;
-      text-decoration: none;
-      &:hover {
-        color: $theme-color;
-      }
-    }
-  }
-  .card img {
-    width: 100%;
-  }
 }
 
 // Publications
 .publications {
   margin-top: 1rem;
+
   h2.year {
-    color: lighten($theme-color, 25%);
+    color: $grey-color;
     border-top: 1px solid $grey-color-light;
     padding-top: 1rem;
-    margin-top: 2rem;
-    margin-bottom: -2rem;
-    text-align: right;
+    padding-bottom: 1rem;
+    text-align: center;
   }
+
   .bibliography {
     list-style: none;
     padding: 0;
     margin-top: 0;
 
     .row {
-      margin-bottom: 1.2rem; // distance between publications
+      margin-bottom: 2rem; // distance between publications
+      margin-top: 2rem; // distance between publications
     }
 
     li {
       margin-bottom: 1rem;
+
       .abbr {
         // space around publication badges.
         height: 1.5rem;
         margin-bottom: 0.1rem;
       }
+
       span {
         display: block;
       }
+
       .title {
         font-weight: bolder;
       }
+
       .author {
         a {
           border-bottom: 1px dashed $theme-color;
+
           &:hover {
             border-bottom-style: solid;
             text-decoration: none;
           }
         }
-        > em {
+
+        >em {
           border-bottom: 1px solid;
           font-style: normal;
         }
       }
+
       em.star {
         border-bottom: none;
         color: $theme-color;
         font-style: normal;
       }
+
       a.abstract,
       a.bib {
         color: $link-color;
         cursor: pointer;
+
         &:hover {
           color: $text-color;
           text-decoration: underline;
@@ -331,12 +319,14 @@ footer.sticky-bottom {
     font-size: 0.85rem;
     text-align: justify;
   }
+
   .bib pre {
     line-height: 1.4em;
     margin: 0.8em;
     font-size: 0.7rem;
     text-align: justify;
   }
+
   .abstract.hidden,
   .bib.hidden {
     max-height: 0; // hidden with zero height
@@ -346,6 +336,7 @@ footer.sticky-bottom {
     border-radius: 1rem;
     background-color: $theme-color-clear;
   }
+
   .abstract.hidden.open,
   .bib.hidden.open {
     max-height: 100em;
