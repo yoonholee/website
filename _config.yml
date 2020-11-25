@@ -114,8 +114,20 @@ plugins:
   - jekyll-paginate-v2
   - jekyll/scholar
   - jemoji
+  - jekyll-responsive-image
   # - bootstrap
   # - material-sass
+
+responsive_image:
+  template: _includes/responsive_image.html
+  default_quality: 90
+  sizes:
+    - width: 320
+    - width: 480
+    - width: 800
+  strip: true
+  save_to_source: false
+  cache: false
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
