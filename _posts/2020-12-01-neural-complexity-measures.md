@@ -33,14 +33,14 @@ Another concern is in calibration between models: changing the architecture or i
 We <d-cite key="lee2020nc"></d-cite> took a different approach:
 (1) **we defined a complexity measure in function space**, and (2) **we learned this measure in a data-driven way**.
 More concretely, for any given neural network, a meta-learned model predicts its generalization gap:
-{% responsive_image path: assets/img/nc_assets/gap.png %} 
+{% responsive_image path: assets/img/201201_nc_gap.png %} 
 
 The generalization gap is a direct quantitative measure of the degree of overfitting. 
 While most approaches attempt to find suitable proxies for this quantity, we adopt a meta-learning framework that treats the estimation of the generalization gap as a set-input regression problem.
 
 We call this meta-learned estimator a Neural Complexity (NC) measure. 
 We train NC with the following meta-learning loop:
-{% responsive_image path: assets/img/nc_assets/loop.png %} 
+{% responsive_image path: assets/img/201201_nc_loop.png %} 
 We continually use NC as a regularizer for new task learning runs and store snapshots of these runs into a memory bank. 
 NC itself is trained using minibatches of snapshots, sampled randomly from the memory bank.
 
