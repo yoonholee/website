@@ -13,6 +13,8 @@ authors:
 bibliography: 2018-12-22-distill.bib
 ---
 
+This post is a summary of the paper [Neural Complexity Measures](/publications/#lee2020neural).
+
 Say we have a neural network $$f_\theta: \mathcal{X} \rightarrow \mathcal{Y}$$.
 We want to predict and/or prevent overfitting, so we are often interested in measuring the complexity of the function $$f_\theta$$.
 **How should we measure the complexity of a neural network?**
@@ -33,16 +35,19 @@ Another concern is in calibration between models: changing the architecture or i
 We <d-cite key="lee2020nc"></d-cite> took a different approach:
 (1) **we defined a complexity measure in function space**, and (2) **we learned this measure in a data-driven way**.
 More concretely, for any given neural network, a meta-learned model predicts its generalization gap:
-{% responsive_image path: assets/img/201201_nc_gap.png %} 
+{% responsive_image path: assets/img/201201_nc_gap.png alt: "Definition of the generalization gap." %} 
 
 The generalization gap is a direct quantitative measure of the degree of overfitting. 
 While most approaches attempt to find suitable proxies for this quantity, we adopt a meta-learning framework that treats the estimation of the generalization gap as a set-input regression problem.
 
 We call this meta-learned estimator a Neural Complexity (NC) measure. 
 We train NC with the following meta-learning loop:
-{% responsive_image path: assets/img/201201_nc_loop.png %} 
+{% responsive_image path: assets/img/201201_nc_loop.png alt: "Training loop of the neural complexity measures model." %} 
 We continually use NC as a regularizer for new task learning runs and store snapshots of these runs into a memory bank. 
-NC itself is trained using minibatches of snapshots, sampled randomly from the memory bank.
+We train NC using minibatches of snapshots, sampled randomly from the memory bank.
+
+NC is a neural network which takes (data, outputs, labels) for training data and (data, outputs) for held-out validation data to produce a single scalar value:
+{% responsive_image path: assets/img/201201_nc_architecture.png alt: "Architecture of the neural complexity measures model." %} 
 
 In the paper, we show proof-of-concept experiments that show that an NC model can learn to predict the generalization gap in synthetic regression and real-world image classification problems. 
 The trained NC models show signs of generalization to out-of-distribution learner architectures. 
