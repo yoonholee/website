@@ -2097,15 +2097,15 @@ d-appendix > distill-appendix {
     //     </p>
     //   `).join('')}
     // </div>
+    // <div class="byline grid">
+    //   <div>
+    //     <h3>Published</h3>
+    //     ${frontMatter.publishedDate ? `
+    //       <p>${frontMatter.publishedMonth} ${frontMatter.publishedDay}, ${frontMatter.publishedYear}</p> ` : `
+    //       <p><em>Not published yet.</em></p>`}
+    //   </div>
+    // </div>
     return `
-      <div class="byline grid">
-        <div>
-          <h3>Published</h3>
-          ${frontMatter.publishedDate ? `
-            <p>${frontMatter.publishedMonth} ${frontMatter.publishedDay}, ${frontMatter.publishedYear}</p> ` : `
-            <p><em>Not published yet.</em></p>`}
-        </div>
-      </div>
     `;
   }
 
