@@ -1,15 +1,25 @@
 /*******************************************************************************
  * Styles for the base elements of the theme.
  ******************************************************************************/
-@font-face {font-family: "TschicholdBookW00-Regular"; src: url("//db.onlinewebfonts.com/t/6a959741d543fc776c857062773193f4.ttf") format("truetype"); }
-@font-face {font-family: "TschicholdW00-Bold"; src: url("//db.onlinewebfonts.com/t/3dd328e520e5f8e212a605cd30fd4237.ttf") format("truetype"); }
+@font-face {
+  font-family: "TschicholdBookW00-Regular";
+  font-display: swap;
+  src: url("//db.onlinewebfonts.com/t/6a959741d543fc776c857062773193f4.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "TschicholdW00-Bold";
+  font-display: swap;
+  src: url("//db.onlinewebfonts.com/t/3dd328e520e5f8e212a605cd30fd4237.woff2") format("woff2");
+}
+
 // @font-face {font-family: "TschicholdBookW00-Regular"; src: url("//db.onlinewebfonts.com/t/6a959741d543fc776c857062773193f4.eot"); src: url("//db.onlinewebfonts.com/t/6a959741d543fc776c857062773193f4.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/6a959741d543fc776c857062773193f4.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/6a959741d543fc776c857062773193f4.woff") format("woff"), url("//db.onlinewebfonts.com/t/6a959741d543fc776c857062773193f4.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/6a959741d543fc776c857062773193f4.svg#TschicholdBookW00-Regular") format("svg"); }
 // @font-face {font-family: "TschicholdW00-Bold"; src: url("//db.onlinewebfonts.com/t/3dd328e520e5f8e212a605cd30fd4237.eot"); src: url("//db.onlinewebfonts.com/t/3dd328e520e5f8e212a605cd30fd4237.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/3dd328e520e5f8e212a605cd30fd4237.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/3dd328e520e5f8e212a605cd30fd4237.woff") format("woff"), url("//db.onlinewebfonts.com/t/3dd328e520e5f8e212a605cd30fd4237.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/3dd328e520e5f8e212a605cd30fd4237.svg#TschicholdW00-Bold") format("svg"); }
 html,
 body {
   height: 100%;
   // font-family: 'TschicholdW00-Regular', sans-serif;
-  font-family: 'TschicholdBookW00-Regular', sans-serif;
+  font-family: 'TschicholdBookW00-Regular', 'Roboto', sans-serif;
 }
 
 b,
@@ -17,7 +27,7 @@ strong {
   // font-family: 'TschicholdW00-Italic', sans-serif;
   // font-family: 'TschicholdBookW00-Regular', sans-serif;
   // font-family: 'TschicholdBookCondensedW00-Rg', sans-serif;
-  font-family: 'TschicholdW00-Bold', sans-serif;
+  font-family: 'TschicholdW00-Bold', 'Roboto', sans-serif;
   font-weight: normal !important;
 }
 
@@ -57,7 +67,7 @@ strong {
 .about-name,
 .news h2 {
   // font-family: 'NanukW00-Regular', sans-serif;
-  font-family: 'TschicholdBookW00-Regular', sans-serif;
+  font-family: 'TschicholdBookW00-Regular', 'Roboto', sans-serif;
   font-weight: 300 !important;
   font-size: 2rem;
   letter-spacing: 0.1rem;
