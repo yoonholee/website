@@ -1,16 +1,68 @@
 /*******************************************************************************
  * Styles for the base elements of the theme.
  ******************************************************************************/
+html,
+body {
+  height: 100%;
+  // font-family: 'TschicholdW00-Regular', sans-serif;
+  font-family: 'TschicholdBookW00-Regular', sans-serif;
+}
 
-// Always have margin at the bottom of the page.
+b,
+strong {
+  // font-family: 'TschicholdW00-Italic', sans-serif;
+  // font-family: 'TschicholdBookW00-Regular', sans-serif;
+  // font-family: 'TschicholdBookCondensedW00-Rg', sans-serif;
+  font-family: 'TschicholdW00-Bold', sans-serif;
+  font-weight: normal !important;
+}
+
+#nonFooter {
+  min-height: 100%;
+  position: relative;
+  /* Firefox */
+  min-height: -moz-calc(100% - 10rem);
+  /* WebKit */
+  min-height: -webkit-calc(100% - 10rem);
+  /* Opera */
+  min-height: -o-calc(100% - 10rem);
+  /* Standard */
+  min-height: calc(100% - 10rem);
+}
+
+#footer {
+  height: 10rem;
+  margin: 0;
+  clear: both;
+  width: 100%;
+  position: relative;
+}
+
+// Bottom margin
 .container.mt-5 {
-  margin-bottom: 10rem;
+  margin-bottom: 4rem;
 }
 
 // Typography
-body {
-  font-family: "Poppins", sans-serif;
-  // font-family: "Roboto", sans-serif;
+.clearfix {
+  letter-spacing: 0.02rem;
+}
+
+// First page font
+.about-name,
+.news h2 {
+  // font-family: 'NanukW00-Regular', sans-serif;
+  font-family: 'TschicholdBookW00-Regular', sans-serif;
+  font-weight: 300 !important;
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  margin-bottom: .5rem;
+
+
+  // display: table; /* keep the background color wrapped tight */
+  // padding: 0rem 1rem;
+  // background-color: black;
+  // color: white;
 }
 
 a,
@@ -22,6 +74,37 @@ table.table a {
     color: $text-color;
     text-decoration: underline;
     transition: none;
+  }
+}
+
+
+// Social footer
+.social {
+  padding: 3rem 0;
+  text-align: center;
+  background-color: #222222;
+
+  .contact-icon {
+    font-size: 1rem;
+
+    .contact-separator,
+    h4 {
+      color: rgb(179, 179, 179);
+    }
+
+    a {
+      color: white;
+
+      &:hover {
+        color: $theme-color;
+      }
+    }
+  }
+
+  .contact-note {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #999;
   }
 }
 
@@ -55,17 +138,10 @@ table.table a {
 }
 
 // Navbar customization
-
 .navbar.navbar-light {
   box-shadow: none;
   border-bottom: 1px solid $grey-color-light;
   opacity: 0.95;
-
-  // Remove link decoration
-  // a &:hover {
-  //   text-decoration: none;
-  // }
-
 
   .navbar-nav .nav-item .nav-link {
     &:hover {
@@ -127,45 +203,26 @@ table.table a {
 
 // News
 .news {
-  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 
   table {
     border-spacing: 0rem;
 
-    td {
-      font-size: 1rem;
-
-      p {
-        margin-bottom: 0.3rem;
-      }
+    td p {
+      font-size: 1.0rem;
+      margin-bottom: 0.3rem;
     }
   }
 
   table.table-sm th,
   table.table-sm td {
     padding: 0 0.3rem;
-  }
-}
 
-// Social (bottom)
-.social {
-  margin-top: 1.5rem;
-  text-align: center;
-
-  .contact-icon {
-    font-size: 3.5rem;
-
-    a {
-      color: $grey-color-dark;
-
-      &:hover {
-        color: $theme-color;
-      }
+    p {
+      font-size: 1.0rem;
+      margin-bottom: 0.3rem;
     }
-  }
-
-  .contact-note {
-    font-size: 0.85rem;
   }
 }
 
@@ -219,21 +276,22 @@ table.table a {
 
 // Distill
 .post.distill {
-  hr{
+  hr {
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
-  a {
-  color: #00355d;
-  border-bottom: 0px;
 
-  &:hover {
-    color: $text-color;
-    text-decoration: underline;
-    transition: none;
+  a {
+    color: #00355d;
     border-bottom: 0px;
+
+    &:hover {
+      color: $text-color;
+      text-decoration: underline;
+      transition: none;
+      border-bottom: 0px;
+    }
   }
-}
 }
 
 // Publications
@@ -269,10 +327,6 @@ table.table a {
 
       span {
         display: block;
-      }
-
-      .title {
-        font-weight: bolder;
       }
 
       .author {
@@ -357,4 +411,13 @@ table.table a {
   display: inline-block;
   box-shadow: 0.15rem 0.15rem 0.2rem #aaaaaa;
   padding: 0rem 0.8rem;
+}
+
+// distill blogpost
+d-appendix {
+  color: rgba(0, 0, 0, 0.9) !important;
+
+  h3 {
+    color: rgba(0, 0, 0, 0.9) !important;
+  }
 }

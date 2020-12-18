@@ -11,7 +11,9 @@
         }
       </style>
       <tr>
-        <th scope="row">{{ item.date | date: "%Y/%m"}}</th>
+        <th scope="row"> <p>
+          {{ item.date | date: "%Y/%m"}}
+        </p> </th>
 
         <td>
           {% if item.inline %} {{ item.content | remove: '

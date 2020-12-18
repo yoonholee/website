@@ -12,7 +12,7 @@
 
   <div class="col-sm-10">
     {% if entry.type == "thesis" %} {{reference}} {% else %}
-    <span class="title">{{entry.title}}</span>
+    <span class="title"><b>{{entry.title}}</b></span>
     <span class="author">
       {% for author in entry.author_array %} {% if forloop.length == 1 %} {% if
       author.first contains site.scholar.first_name %}

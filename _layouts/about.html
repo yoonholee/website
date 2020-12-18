@@ -5,7 +5,7 @@ layout: default
 <div class="post">
   <header class="post-header">
     {% assign name = site.title | split: ' ' %}
-    <h1 class="post-title">
+    <h1 class="post-title about-name">
       <span class="font-weight-bold">{{ name | first }}</span> {{ name | last }}
     </h1>
     <p class="post-description">{{ page.description }}</p>
@@ -30,12 +30,6 @@ layout: default
     {% endif %}
 
     <div class="clearfix">{{ content }}</div>
-
-    {% if page.news %} {% include news.html %} {% endif %} {% if page.social %}
-    <div class="social">
-      {% include social.html %}
-      <div class="contact-note">{{ site.contact_note }}</div>
-    </div>
-    {% endif %}
+    {% if page.news %} {% include news.html %} {% endif %} 
   </article>
 </div>
