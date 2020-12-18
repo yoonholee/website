@@ -1,15 +1,16 @@
 /*******************************************************************************
  * Styles for the base elements of the theme.
  ******************************************************************************/
+@font-face {font-family: "TschicholdBookW00-Regular"; src: url("//db.onlinewebfonts.com/t/6a959741d543fc776c857062773193f4.ttf") format("truetype"); }
+@font-face {font-family: "TschicholdW00-Bold"; src: url("//db.onlinewebfonts.com/t/3dd328e520e5f8e212a605cd30fd4237.ttf") format("truetype"); }
+// @font-face {font-family: "TschicholdBookW00-Regular"; src: url("//db.onlinewebfonts.com/t/6a959741d543fc776c857062773193f4.eot"); src: url("//db.onlinewebfonts.com/t/6a959741d543fc776c857062773193f4.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/6a959741d543fc776c857062773193f4.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/6a959741d543fc776c857062773193f4.woff") format("woff"), url("//db.onlinewebfonts.com/t/6a959741d543fc776c857062773193f4.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/6a959741d543fc776c857062773193f4.svg#TschicholdBookW00-Regular") format("svg"); }
+// @font-face {font-family: "TschicholdW00-Bold"; src: url("//db.onlinewebfonts.com/t/3dd328e520e5f8e212a605cd30fd4237.eot"); src: url("//db.onlinewebfonts.com/t/3dd328e520e5f8e212a605cd30fd4237.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/3dd328e520e5f8e212a605cd30fd4237.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/3dd328e520e5f8e212a605cd30fd4237.woff") format("woff"), url("//db.onlinewebfonts.com/t/3dd328e520e5f8e212a605cd30fd4237.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/3dd328e520e5f8e212a605cd30fd4237.svg#TschicholdW00-Bold") format("svg"); }
 html,
 body {
   height: 100%;
   // font-family: 'TschicholdW00-Regular', sans-serif;
   font-family: 'TschicholdBookW00-Regular', sans-serif;
 }
-
-@import url(//db.onlinewebfonts.com/c/6a959741d543fc776c857062773193f4?family=TschicholdBookW00-Regular);
-@font-face {font-family: "TschicholdBookW00-Regular"; src: url("//db.onlinewebfonts.com/t/6a959741d543fc776c857062773193f4.eot"); src: url("//db.onlinewebfonts.com/t/6a959741d543fc776c857062773193f4.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/6a959741d543fc776c857062773193f4.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/6a959741d543fc776c857062773193f4.woff") format("woff"), url("//db.onlinewebfonts.com/t/6a959741d543fc776c857062773193f4.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/6a959741d543fc776c857062773193f4.svg#TschicholdBookW00-Regular") format("svg"); }
 
 b,
 strong {
@@ -20,8 +21,6 @@ strong {
   font-weight: normal !important;
 }
 
-@import url(//db.onlinewebfonts.com/c/3dd328e520e5f8e212a605cd30fd4237?family=TschicholdW00-Bold);
-@font-face {font-family: "TschicholdW00-Bold"; src: url("//db.onlinewebfonts.com/t/3dd328e520e5f8e212a605cd30fd4237.eot"); src: url("//db.onlinewebfonts.com/t/3dd328e520e5f8e212a605cd30fd4237.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/3dd328e520e5f8e212a605cd30fd4237.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/3dd328e520e5f8e212a605cd30fd4237.woff") format("woff"), url("//db.onlinewebfonts.com/t/3dd328e520e5f8e212a605cd30fd4237.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/3dd328e520e5f8e212a605cd30fd4237.svg#TschicholdW00-Bold") format("svg"); }
 
 #nonFooter {
   min-height: 100%;
