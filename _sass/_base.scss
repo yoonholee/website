@@ -21,21 +21,23 @@ body {
   // font-family: 'TschicholdW00-Regular', sans-serif;
   // font-family: 'TschicholdBookW00-Regular', 'Roboto', sans-serif;
   // font-family: 'PT Sans', sans-serif;
-  font-family: 'Biryani', sans-serif;
+  // font-family: 'Biryani', sans-serif;
+  font-family: 'Inter', sans-serif;
+
   font-weight: 400;
-  font-size: 0.96rem;
-  line-height: 1.7rem;
-  color: #111;
+  // font-size: 0.96rem;
+  // line-height: 1.7rem;
+  // color: #111;
 }
 
-// b,
-// strong {
+b,
+strong {
 //   // font-family: 'TschicholdW00-Italic', sans-serif;
 //   // font-family: 'TschicholdBookW00-Regular', sans-serif;
 //   // font-family: 'TschicholdBookCondensedW00-Rg', sans-serif;
 //   font-family: 'TschicholdW00-Bold', 'Roboto', sans-serif;
-//   // font-weight: normal !important;
-// }
+  font-weight: 600;
+}
 
 
 #nonFooter {
