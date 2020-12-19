@@ -1,41 +1,18 @@
 /*******************************************************************************
  * Styles for the base elements of the theme.
  ******************************************************************************/
-// @font-face {
-//   font-family: "TschicholdBookW00-Regular";
-//   font-display: swap;
-//   src: url("//db.onlinewebfonts.com/t/6a959741d543fc776c857062773193f4.woff2") format("woff2");
-// }
-
-// @font-face {
-//   font-family: "TschicholdW00-Bold";
-//   font-display: swap;
-//   src: url("//db.onlinewebfonts.com/t/3dd328e520e5f8e212a605cd30fd4237.woff2") format("woff2");
-// }
-
-// @font-face {font-family: "TschicholdBookW00-Regular"; src: url("//db.onlinewebfonts.com/t/6a959741d543fc776c857062773193f4.eot"); src: url("//db.onlinewebfonts.com/t/6a959741d543fc776c857062773193f4.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/6a959741d543fc776c857062773193f4.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/6a959741d543fc776c857062773193f4.woff") format("woff"), url("//db.onlinewebfonts.com/t/6a959741d543fc776c857062773193f4.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/6a959741d543fc776c857062773193f4.svg#TschicholdBookW00-Regular") format("svg"); }
-// @font-face {font-family: "TschicholdW00-Bold"; src: url("//db.onlinewebfonts.com/t/3dd328e520e5f8e212a605cd30fd4237.eot"); src: url("//db.onlinewebfonts.com/t/3dd328e520e5f8e212a605cd30fd4237.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/3dd328e520e5f8e212a605cd30fd4237.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/3dd328e520e5f8e212a605cd30fd4237.woff") format("woff"), url("//db.onlinewebfonts.com/t/3dd328e520e5f8e212a605cd30fd4237.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/3dd328e520e5f8e212a605cd30fd4237.svg#TschicholdW00-Bold") format("svg"); }
 html,
 body {
   height: 100%;
-  // font-family: 'TschicholdW00-Regular', sans-serif;
-  // font-family: 'TschicholdBookW00-Regular', 'Roboto', sans-serif;
-  // font-family: 'PT Sans', sans-serif;
-  // font-family: 'Biryani', sans-serif;
-  font-family: 'Inter', sans-serif;
+}
 
+body {
+  font-family: "Open Sans", sans-serif;
   font-weight: 400;
-  // font-size: 0.96rem;
-  // line-height: 1.7rem;
-  // color: #111;
 }
 
 b,
 strong {
-//   // font-family: 'TschicholdW00-Italic', sans-serif;
-//   // font-family: 'TschicholdBookW00-Regular', sans-serif;
-//   // font-family: 'TschicholdBookCondensedW00-Rg', sans-serif;
-//   font-family: 'TschicholdW00-Bold', 'Roboto', sans-serif;
   font-weight: 600;
 }
 
@@ -72,20 +49,10 @@ strong {
 }
 
 // First page font
-.about-name,
 .news h2 {
-  // font-family: 'NanukW00-Regular', sans-serif;
-  // font-family: 'TschicholdBookW00-Regular', 'Roboto', sans-serif;
   font-weight: 600 !important;
-  font-size: 2rem;
-  // letter-spacing: 0.1rem;
+  font-size: 1.5rem;
   margin-bottom: .5rem;
-
-
-  // display: table; /* keep the background color wrapped tight */
-  // padding: 0rem 1rem;
-  // background-color: black;
-  // color: white;
 }
 
 a,
@@ -149,15 +116,12 @@ table.table a {
 .profile {
   width: 8em;
   margin-left: 1em;
+}
 
-  .address {
-    font-family: monospace;
-    font-size: 1.2rem;
-
-    p {
-      margin: 0;
-    }
-  }
+.navbar-brand {
+  font-size: 1.8rem;
+  padding: .2rem 0;
+  font-weight: 600;
 }
 
 // Navbar customization
@@ -165,8 +129,11 @@ table.table a {
   box-shadow: none;
   border-bottom: 1px solid $grey-color-light;
   opacity: 0.95;
+  font-weight: 400;
 
   .navbar-nav .nav-item .nav-link {
+    padding: .2rem 0 .2rem .8rem !important;
+
     &:hover {
       color: $theme-color-dark;
       transition: none;
@@ -176,7 +143,6 @@ table.table a {
   .navbar-nav .nav-item.active>.nav-link {
     background-color: inherit;
     color: $theme-color;
-    font-weight: 500;
 
     &:hover {
       color: $theme-color;
@@ -241,7 +207,7 @@ table.table a {
   table.table-sm th,
   table.table-sm td {
     font-weight: 400;
-    padding: 0 0.3rem;
+    padding: 0 0.5rem 0 0;
 
     p {
       font-size: 1.0rem;
@@ -253,6 +219,10 @@ table.table a {
 // Blog
 .post-list {
   padding: 0rem;
+
+  .post-title {
+    font-size: 1.8rem;
+  }
 
   li {
     border-bottom: 1.2px solid #dddddd;
@@ -441,10 +411,12 @@ table.table a {
 d-article {
   color: #111 !important;
 }
+
 d-title h1 {
   font-weight: 500 !important;
 
 }
+
 d-appendix {
   color: rgba(0, 0, 0, 0.9) !important;
 
