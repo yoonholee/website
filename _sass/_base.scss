@@ -7,13 +7,14 @@ body {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
-  font-weight: 400;
+  font-family: Avenir, Tahoma, "Open Sans", sans-serif;
+  font-weight: 200;
+  color: #242424;
 }
 
 b,
 strong {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 
@@ -50,7 +51,7 @@ strong {
 
 // First page font
 .news h2 {
-  font-weight: 600 !important;
+  font-weight: 500 !important;
   font-size: 1.5rem;
   margin-bottom: .5rem;
 }
@@ -199,19 +200,16 @@ table.table a {
     border-spacing: 0rem;
 
     td p {
-      font-size: 1.0rem;
       margin-bottom: 0.3rem;
     }
   }
 
   table.table-sm th,
   table.table-sm td {
-    font-weight: 400;
     padding: 0 0.5rem 0 0;
-
     p {
       font-size: 1.0rem;
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.4rem;
     }
   }
 }
