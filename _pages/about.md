@@ -14,8 +14,8 @@ social: true
 ---
 
 I'm a research scientist at [AITRICS](https://www.aitrics.com/).
-I completed my M.S. in the department of Computer Science and Engineering at POSTECH, under the supervision of professor [Seungjin Choi](http://mlg.postech.ac.kr/~seungjin/).
-I completed my B.S. degree in the department of Mathematics at POSTECH.
+I previously completed my master's degree in at POSTECH, advised by professor [Seungjin Choi](http://mlg.postech.ac.kr/~seungjin/).
+I also completed my undergraduate degree in POSTECH's math department.
 
 My research interests include:
 

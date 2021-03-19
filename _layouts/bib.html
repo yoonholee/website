@@ -108,10 +108,7 @@
     <!-- Hidden abstract block -->
     {% if entry.abstract %}
     <span class="abstract hidden">
-      <p>
-        TLDR:
-        <strong>{{ entry.tldr }}</strong>
-      </p>
+      <p> <strong>TLDR: {{ entry.tldr }}</strong> </p>
       <p>{{entry.abstract }}</p>
     </span>
     {% endif %} 
