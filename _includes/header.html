@@ -36,6 +36,17 @@
               {% endif %}
             </a>
           </li>
+          <!-- Other pages -->
+          {% assign sorted_pages = site.pages | sort: "title" %} {% for p in
+          sorted_pages %} {% if p.nav and p.autogen == nil %}
+          <li class="nav-item {% if page.title == p.title %}active{% endif %}">
+            <a class="nav-link" href="{{ p.url | relative_url }}">
+              {{ p.title }} {% if page.title == p.title %}
+              <span class="sr-only">(current)</span>
+              {% endif %}
+            </a>
+          </li>
+          {% endif %} {% endfor %}
           {% if site.blog_name %}
           <!-- Blog -->
           <li
@@ -48,17 +59,6 @@
             </a>
           </li>
           {% endif %}
-          <!-- Other pages -->
-          {% assign sorted_pages = site.pages | sort: "title" %} {% for p in
-          sorted_pages %} {% if p.nav and p.autogen == nil %}
-          <li class="nav-item {% if page.title == p.title %}active{% endif %}">
-            <a class="nav-link" href="{{ p.url | relative_url }}">
-              {{ p.title }} {% if page.title == p.title %}
-              <span class="sr-only">(current)</span>
-              {% endif %}
-            </a>
-          </li>
-          {% endif %} {% endfor %}
           <li class="nav-item">
             <a class="nav-link" href="/assets/pdf/CV.pdf">CV </a>
           </li>

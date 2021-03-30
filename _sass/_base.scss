@@ -290,11 +290,11 @@ table.table a {
 .publications {
   margin-top: 1rem;
 
-  h2.year {
+  .year {
+    font-size: 1.5rem;
     color: $grey-color;
-    border-top: 1px solid $grey-color-light;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
     text-align: center;
   }
 
@@ -304,12 +304,13 @@ table.table a {
     margin-top: 0;
 
     .row {
-      margin-bottom: 2rem; // distance between publications
-      margin-top: 2rem; // distance between publications
+      margin-bottom: 1rem; // distance between publications
+      margin-top: 1rem; // distance between publications
     }
 
     li {
       margin-bottom: 1rem;
+      font-size: 0.95rem;
 
       .abbr {
         // space around publication badges.
