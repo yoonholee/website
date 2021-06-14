@@ -126,17 +126,17 @@
 
 @article{pakman2020ACP,
   title    = {Amortized Probabilistic Detection of Communities in Graphs},
-  author   = {Ari Pakman* and Yueqi Wang* and Yoonho Lee* and Pallab Basu and Juho Lee and Yee Whye Teh and Liam Paninski},
-  year     = {2020},
-  month    = {10},
+  author   = {Yueqi Wang* and Yoonho Lee* and Pallab Basu and Juho Lee and Yee Whye Teh and Liam Paninski, and Ari Pakman},
+  year     = {2021},
+  month    = {3},
   paper    = {https://arxiv.org/abs/2010.15727},
   code     = {https://github.com/aripakman/attentive_clustering_processes},
   tldr     = {An attention-based method for probabilistically detecting communities within graphs.},
-  abstract = {Graph neural networks (GNNs) have reshaped the landscape of models and algorithms for analyzing data on graphs. Yet despite the many architectures proposed to encode graph information and perform different tasks, a proper probabilistic formulation of neural models for community discovery is still lacking. In this work we fill this gap by combining GNNs with recent architectures for amortized probabilistic clustering, which we extend with attention layers. The resulting model is trained with labeled network data containing varying numbers of communities K. At test time, the model yields samples from the posterior distribution of community labels for networks of any size using only O(K) forward evaluations. Apart from quantifying uncertainty in a principled way, this approach accommodates Bayesian nonparametric priors, thus bypassing the common requirement to hard code the (maximum) number of communities in the neural architecture. We illustrate the method on several synthetic and real datasets, showing superior performance both to previous approaches to supervised neural community detection and to similar architectures built using other amortized clustering models.},
+  abstract = {Learning community structures in graphs has broad applications across scientific domains. While graph neural networks (GNNs) have been successful in encoding graph structures, existing GNN-based methods for community detection are limited by requiring knowledge of the number of communities in advance, in addition to lacking a proper probabilistic formulation to handle uncertainty. We propose a simple framework for amortized community detection, which addresses both of these issues by combining the expressive power of GNNs with recent methods for amortized clustering. Our models consist of a graph representation backbone that extracts structural information and an amortized clustering network that naturally handles variable numbers of clusters. Both components combine into well-defined models of the posterior distribution of graph communities and are jointly optimized given labeled graphs. At inference time, the models yield parallel samples from the posterior of community labels, quantifying uncertainty in a principled way. We evaluate several models from our framework on synthetic and real datasets and demonstrate superior performance to previous methods. As a separate contribution, we extend recent amortized probabilistic clustering architectures by adding attention modules, which yield further improvements on community detection tasks.},
   bib      = {@article\{pakman2020acp,
   title         = \{Amortized Probabilistic Detection of Communities in Graphs\},
   author        = \{Ari Pakman and Yueqi Wang and Yoonho Lee and Pallab Basu and Juho Lee and Yee Whye Teh and Liam Paninski\},
-  year          = \{2020\},
+  year          = \{2021\},
   archiveprefix = \{arXiv\},
   primaryclass  = \{stat.ML\},
   eprint        = \{2010.15727\}
@@ -177,6 +177,38 @@
   title     = \{On the Distribution of Penultimate Activations of Classification Networks\},
   author    = \{Seo*, Minkyo and Lee*, Yoonho and Kwak, Suha\},
   booktitle = \{Conference on Uncertainty in Artificial Intelligence (UAI)\},
+  year      = \{2021\}
+\}}
+}
+
+@article{nam2021diversity,
+  title    = {Diversity Matters When Learning From Ensembles},
+  author   = {Giung Nam and Jongmin Yoon and Yoonho Lee and Juho Lee},
+  year     = {2021},
+  month    = {4},
+  tldr     = {Inputs promoting output diversities can be useful when distilling from deep ensembles.},
+  abstract = {
+    Deep ensembles excel in large-scale image classification tasks both in terms of prediction accuracy and calibration. Despite being simple to train, the computation and memory cost of deep ensembles limits their practicability. While some recent works propose to distill an ensemble model into a single model to reduce such costs, there is still a performance gap between the ensemble and distilled models. We propose a simple approach for reducing this gap, i.e., making the distilled performance close to the full ensemble. Our key assumption is that a distilled model should absorb as much function diversity inside the ensemble as possible. We first empirically show that the typical distillation procedure does not effectively transfer such diversity, especially for complex models that achieve near-zero training error. To fix this, we propose an augmentation-based distillation strategy that reveals diversity by seeking inputs for which ensemble member outputs disagree. We empirically show that a model distilled with such augmented samples indeed exhibits enhanced diversity, leading to improved performance.
+    },
+  bib      = {@inproceedings\{nam2021diversity,
+  title     = \{Diversity Matters When Learning From Ensembles\},
+  author    = \{Nam, Giung and Yoon, Jongmin and Lee, Yoonho and Lee, Juho\},
+  year      = \{2021\}
+\}}
+}
+
+@article{lee2021risknet,
+  title    = {Efficient Checkpoint-Based Meta-Learning With Gradient Matching},
+  author   = {Yoonho Lee and Juho Lee},
+  year     = {2021},
+  month    = {5},
+  tldr     = {RiskNet mimics the test loss both in terms of value and gradients.},
+  abstract = {
+    Meta-learning methods optimize components inside a learning algorithm to achieve low validation loss after task learning. Typically, such methods backpropagate through the entire learning procedure. Although such an approach can successfully learn to learn small tasks, they are fundamentally unable to scale to tasks involving large datasets or requiring long training runs. We propose a meta-learning method that does not suffer from such issues: we first save a set of model checkpoints obtained during regular task learning. Then, we use these checkpoints to train a separate neural network, which we call RiskNet, to mimic the risk functional's value while also producing the same gradients for task learner parameters. We show that our gradient matching component is critical to sample efficiency and performance through experiments in few-shot regression and image classification benchmarks. Furthermore, the resulting model is shown to faithfully mimic the target gradients.
+    },
+  bib      = {@inproceedings\{lee2021risknet,
+  title     = \{Efficient Checkpoint-Based Meta-Learning With Gradient Matching\},
+  author    = \{Lee, Yoonho and Lee, Juho\},
   year      = \{2021\}
 \}}
 }
