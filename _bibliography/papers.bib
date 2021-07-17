@@ -169,6 +169,7 @@
   author   = {Seo*, Minkyo and Lee*, Yoonho and Kwak, Suha},
   year     = {2021},
   month    = {1},
+  paper    = {https://arxiv.org/abs/2107.01900},
   tldr     = {Final FC layer weights contain information about class relations.},
   abstract = {
     This paper studies the probability distributions of penultimate activations of classification networks. Specifically, we show that, when a classification network is trained with the cross-entropy loss, its final classification layer forms a Generative-Discriminative pair with a generative classifier based on a specific distribution of penultimate activations. More importantly, the distribution is parameterized by the weights of the final fully-connected layer, and can be considered as a generative model that synthesizes the penultimate activations without feeding input data. We empirically demonstrate that this generative model enables stable knowledge distillation in the presence of domain shift, and can also transfer knowledge from a classifier to variational autoencoders and generative adversarial networks for class-conditional image generation.

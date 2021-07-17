@@ -30,14 +30,14 @@
       >, {% else %} {{author.first}} {{author.last}}, {% endif %} {% endif %} {%
       else %} {% if author.first contains site.scholar.first_name %}
       <b> {{author.first}} {{author.last}}</b>
-      {% else %} {% if site.data.coauthors[author.first] %} and
+      {% else %} {% if site.data.coauthors[author.first] %} 
       <a
         class="coauthorlink"
         href="{{site.data.coauthors[author.first].url}}"
         target="_blank"
         >{{author.first}} {{author.last}}</a
       >
-      {% else %} and {{author.first}} {{author.last}} {% endif %} {% endif %} {%
+      {% else %} {{author.first}} {{author.last}} {% endif %} {% endif %} {%
       endunless %} {% endif %} {% endfor %}
     </span>
 
